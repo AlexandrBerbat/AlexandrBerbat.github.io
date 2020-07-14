@@ -1,0 +1,21 @@
+*
+{
+    margin:auto;
+}
+
+h1
+{
+    font-style: italic;
+    text-align: center;
+}
+
+table
+{
+
+    border: double 4px #333;
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 7px 11px;
+    font-style: italic;
+}
+
