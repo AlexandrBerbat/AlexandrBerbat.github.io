@@ -1,0 +1,40 @@
+body
+{
+    background-color: gray;
+}
+
+div
+{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -220px 0 0 -220px;
+
+    border: solid 2px white;
+
+}
+
+table
+{
+    padding: 2px;
+    border: solid 22px black;
+    border-spacing: 0px;
+    background-color: white;
+}
+
+td
+{
+    height: 50px;
+    width: 50px;
+}
+
+
+tr:nth-child(odd) td:nth-child(odd)
+{
+    background: black;
+}
+tr:nth-child(even) td:nth-child(even)
+{
+    background: black;
+}
+
