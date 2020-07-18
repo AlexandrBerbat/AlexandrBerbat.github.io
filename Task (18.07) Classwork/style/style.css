@@ -1,36 +1,4 @@
 
-/*.mainmenu {
-
-
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-
-}
-
-
-.dropdown{
-    position: relative;
-    display: row;
-    margin: 0;
-}
-
-.dropdown-child {
-    display: none;
-    position: absolute;
-    background-color: chocolate;
-}
-.dropdown-child a {
-    color: white;
-    padding: 6px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-child {
-    display: block;
-}*/
-
-
 nav
 {
     width:100%;
@@ -69,7 +37,6 @@ nav ul li a
     font-weight:bold;
     color:black;
     padding:10px 15px;
-    /*border-top:1px solid black;*/
     text-decoration:none;
 }
             
@@ -79,10 +46,7 @@ nav ul  li:first-child a
 }
 
             
-nav ul li a:hover, nav ul li:hover a
-{           
 
-}
             
 nav ul li ul
 {
@@ -92,7 +56,7 @@ nav ul li ul
     display:none;
     width:auto;
 }
-            /*******показываем выпадашку при наведении ********/
+
 nav ul li:hover ul
 {
     display:block;
@@ -102,10 +66,5 @@ nav ul li ul li a
 {
     white-space:nowrap;
     text-transform:none;
-    /*padding:5px 20px;     */
-}
-                   
-nav ul li ul li a:hover
-{
-    
+
 }
