@@ -66,5 +66,6 @@ nav ul li ul li a
 {
     white-space:nowrap;
     text-transform:none;
+    text-decoration: underline;
 
 }
