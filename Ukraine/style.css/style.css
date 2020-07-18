@@ -1,0 +1,13 @@
+div
+{
+    height: 100px;
+    width: 200px;
+
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -100px 0 0 -100px;
+
+
+    background: linear-gradient(to top, yellow 50%, blue 50%);
+}
