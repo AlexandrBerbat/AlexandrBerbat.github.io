@@ -4,7 +4,7 @@ body
     height: 1000px;
 
 
-    background-color: gray;
+    /*background-color: gray;*/
     border: 3px solid black;
     padding: 10px;
 }
@@ -47,13 +47,14 @@ body
     
 }
 
-/*.card:hover .card_content_front
+
+.card:hover .card_content_front
 {
 
+    opacity: 0;
 
 
-
-}*/
+}
 
 .card:hover .card_content_back
 {
@@ -81,6 +82,9 @@ body
 .card_content_back
 {
 
+
+    transform:rotateY(180deg);
+
     position: absolute;
 
     display: none;
@@ -90,7 +94,7 @@ body
 
     margin-top: -175px;
 
-    background-color: gray;
+    background-color: #e8e8e8;
     border-radius: 7px;
 
 
@@ -98,4 +102,87 @@ body
 
 
     
+}
+
+h1
+{
+    font-size: 24px;
+    color: gray;
+    margin: 0;
+
+    position: absolute;
+    padding-top: 75.5px;
+    left: 15%;
+
+}
+
+h2
+{
+
+    font-size: 22px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.topsign
+{
+    position: absolute;
+    top: 0;
+    left: 3%
+
+}
+
+.botsign
+{
+
+    position: absolute;
+    top: 85%;
+    left: 87%
+
+
+
+    /*text-align: right;*/
+    /*transform:rotateY(180deg);*/
+}
+
+#cardb6_1_Ч
+{
+
+}
+#cardb6_2_П
+{
+
+}
+#cardb10_Б
+{
+
+}
+#cardbВ_П
+{
+
+}
+#cardbД_П
+{
+
+}
+#cardbК_П
+{
+
+}
+#cardbТ_Ч
+{
+
+}
+#cardbТ_Б
+{
+
+}
+#cardbТ_К
+{
+
+}
+#cardbТ_П
+{
+
 }
