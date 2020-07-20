@@ -4,7 +4,6 @@ body
     height: 1000px;
 
 
-
     background-color: gray;
     border: 3px solid black;
     padding: 10px;
@@ -13,15 +12,17 @@ body
 .table
 {
 
-    position: absolute;
+    position: fixed;
     top: 30%;
     left: 10%;
+    width: 100%;
 
 }
 
 .card
 {
     margin-right: -50px;
+
 
     display: inline-block;
     width: 125px;
@@ -32,28 +33,69 @@ body
     border-radius: 7px;
     background-color: white;
 
+
     transition: transform .1s ease-in-out;
 }
 
 
 .card:hover
 {
-    background-color: blue;
-
-
 
     transform: translate3d(0px, -52.5px, 0px) rotateY(180deg);
     box-shadow: 5px -5px 10px black;
-    /*transform: rotateY(180deg);*/
     
+    
+}
+
+/*.card:hover .card_content_front
+{
+
+
+
+
+}*/
+
+.card:hover .card_content_back
+{
+
+    display: inline;
+
+
 }
 
 .card_content_front
 {
+
+
     background: repeating-linear-gradient(-30deg, white, white 27px, darkred 27px, darkred 55px);
-    width: 100%;
-    height: 100%;
+
+
+    width: 125px;
+    height: 175px;
 
     border-radius: 7px;
 
+
+}
+
+.card_content_back
+{
+
+    position: absolute;
+
+    display: none;
+
+    width: 125px;
+    height: 175px;
+
+    margin-top: -175px;
+
+    background-color: gray;
+    border-radius: 7px;
+
+
+
+
+
+    
 }
