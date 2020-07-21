@@ -12,7 +12,7 @@ body
 .table
 {
 
-    position: fixed;
+    position: absolute;
     top: 30%;
     left: 10%;
     width: 100%;
@@ -111,13 +111,14 @@ h1
     margin: 0;
 
     position: absolute;
-    padding-top: 75.5px;
+    padding-top: 40%;
     left: 15%;
 
 }
 
 h2
 {
+    
 
     font-size: 22px;
 
@@ -128,61 +129,312 @@ h2
 .topsign
 {
     position: absolute;
+
     top: 0;
-    left: 3%
+    left: 5%
 
 }
 
 .botsign
 {
 
-    position: absolute;
+    /*position: relative;
     top: 85%;
-    left: 87%
-
-
+    left: 84%*/
+    width: 40px;
+    transform: translate(105px, 110px) rotateX(180deg);
 
     /*text-align: right;*/
     /*transform:rotateY(180deg);*/
 }
 
-#cardb6_1_Ч
-{
 
-}
-#cardb6_2_П
-{
 
-}
-#cardb10_Б
-{
 
-}
-#cardbВ_П
-{
 
-}
-#cardbД_П
+/*//////////////////HEART TOP////////////////////////*/
+.heart.top 
 {
-
+    position: relative;
+    width: 20px; 
+    height: 20px;
 }
-#cardbК_П
+.heart.top:before, .heart.top:after 
 {
-
+    content: "";
+    position: absolute; 
+    left: 10px; 
+    top: 0;
+    width: 10px; 
+    height: 20px;
+    background: #EE4156;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%;
 }
-#cardbТ_Ч
+
+.heart.top:after 
 {
-
+    left: 0;
+    transform: rotate(45deg); 
+    transform-origin: 100% 100%;
 }
-#cardbТ_Б
+/*//////////////////////////////////////////*/
+
+
+
+
+
+
+/*//////////////////HEART BOT////////////////////////*/
+.heart.bot 
 {
-
+    position: relative;
+    width: 20px; 
+    height: 20px;
 }
-#cardbТ_К
+.heart.bot:before, .heart.bot:after 
 {
-
+    content: "";
+    position: absolute; 
+    left: 10px; 
+    top: 0;
+    width: 10px; 
+    height: 20px;
+    background: #EE4156;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%;
 }
-#cardbТ_П
+
+.heart.bot:after 
 {
+    left: 0;
 
+    transform-origin: 100% 100%;
 }
+/*//////////////////////////////////////////*/
+
+
+.heart.top:after
+{
+    top:120%;
+    left: 20%;
+}
+
+.heart.top:before
+{
+    top: 120%;
+    left: 70%;
+}
+
+.heart.bot:after
+{
+    top: 500%;
+    left: 470%;
+
+    transform: rotate(135deg); 
+}
+
+.heart.bot:before
+{
+    top: 500%;
+    left: 590%;
+
+    transform: rotate(225deg); 
+}
+
+
+
+
+
+
+/*//////////////////SPADE TOP////////////////////////*/
+.spade.top 
+{
+    position: relative;
+    width: 20px; 
+    height: 20px;
+}
+.spade.top:before, .spade.top:after 
+{
+    content: "";
+    position: absolute; 
+    left: 10px; 
+    top: 0;
+    width: 10px; 
+    height: 20px;
+    background: black;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%;
+}
+
+.spade.top:after 
+{
+    left: 0;
+    transform: rotate(45deg); 
+    transform-origin: 100% 100%;
+}
+/*//////////////////////////////////////////*/
+
+
+.spade.top:after
+{
+    top:50%;
+    left: -10%;
+    transform: rotate(135deg); 
+}
+
+.spade.top:before
+{
+    top: 50%;
+    left: 110%;
+    transform: rotate(225deg); 
+}
+
+
+
+/*//////////////////SPADE BOT////////////////////////*/
+.spade.bot 
+{
+    position: relative;
+    width: 20px; 
+    height: 20px;
+}
+.spade.bot:before, .spade.bot:after 
+{
+    content: "";
+    position: absolute; 
+    left: 10px; 
+    top: 0;
+    width: 10px; 
+    height: 20px;
+    background: black;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%;
+}
+
+.spade.bot:after 
+{
+    left: 0;
+    transform: rotate(45deg); 
+    transform-origin: 100% 100%;
+}
+/*//////////////////////////////////////////*/
+
+
+.spade.bot:after
+{
+    top: 500%;
+    left: 470%;
+
+    transform: rotate(135deg); 
+}
+
+.spade.bot:before
+{
+    top: 500%;
+    left: 590%;
+
+    transform: rotate(225deg); 
+}
+
+
+
+/*//////////////////DIAMOND TOP////////////////////////*/
+.diamond.top 
+{
+    width: 0px; 
+    height: 0px;
+    border: 12px solid transparent;
+    border-bottom-color: #EE4156;
+    position: relative; 
+    top: 10px;
+    left: 0px;
+}
+    
+.diamond.top:after 
+{
+    content: "";
+    width: 0px; 
+    height: 0px;
+    position: absolute; 
+    left: -12px; 
+    top: 12px;
+    border: 12px solid transparent;
+    border-top-color: #EE4156;
+}
+/*//////////////////////////////////////////*/
+
+/*//////////////////DIAMOND BOT////////////////////////*/
+
+.diamond.bot 
+{
+    width: 0px; 
+    height: 0px;
+    border: 12px solid transparent;
+    border-bottom-color: #EE4156;
+    position: relative; 
+    top: 95px;
+    left: 97px;
+}
+    
+.diamond.bot:after 
+{
+    content: "";
+    width: 0px; 
+    height: 0px;
+    position: absolute; 
+    left: -12px; 
+    top: 12px;
+    border: 12px solid transparent;
+    border-top-color: #EE4156;
+}
+/*//////////////////////////////////////////*/
+
+/*//////////////////CLUB TOP////////////////////////*/
+.club.top 
+{
+    background: black;
+    height: 20px; 
+    width: 5px;
+    position: relative; 
+    left: 11px;
+    top: 22px;
+}
+.club.top:after 
+{
+    content: "";
+    height: 5px; 
+    width: 20px;
+    background: black;
+    position: absolute; 
+    left: -7.5px; 
+    top: 7.5px;
+}
+/*//////////////////////////////////////////*/
+
+/*//////////////////CLUB BOT////////////////////////*/
+
+.club.bot 
+{
+    background: black;
+    height: 20px; 
+    width: 5px;
+    position: relative; 
+    left: 110px;
+    top: 110px;
+}
+.club.bot:after 
+{
+    content: "";
+    height: 5px; 
+    width: 20px;
+    background: black;
+    position: absolute; 
+    left: -7.5px; 
+    top: 7.5px;
+}
+/*//////////////////////////////////////////*/
