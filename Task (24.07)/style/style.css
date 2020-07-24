@@ -1,6 +1,6 @@
 body
 {
-    min-width: 800px;
+    min-width: 450px;
 }
 
 .intro
@@ -24,7 +24,7 @@ body
 .menu
 {
     
-    width: 70%;
+    width: auto;
     
     position: relative;
     right: 5px;
@@ -39,7 +39,7 @@ body
 {
     position: absolute;
     
-    width: 100%;
+    width: auto;
 }
 
 .temp_menu
@@ -47,14 +47,14 @@ body
     display: inline-block;
     position: relative;
     top: 30px;
-    width: 32%;
+    width: auto;
 }
 
 .item_name
 {
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: auto;
 
     border: solid 2px rgb(146, 142, 142);
     font-size: 24px;
