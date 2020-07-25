@@ -1,0 +1,210 @@
+body{
+    background-color: #b9d6ef;
+}
+
+.main
+{
+    height: 350px;
+    width: 733px;
+    margin: 0 auto;
+    
+}
+
+.sea
+{
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    height: 100%;
+    background-color: #266b97;
+
+    border-top: 7px solid #327dad;
+    
+}
+
+#cloud1
+{
+    position: absolute;
+    height: 598px;
+}
+
+#cloud2
+{
+    position: absolute;
+    height: 598px;
+}
+
+.horizon
+{
+    position: absolute;
+    width: 100%;
+    border: solid 1.5px #ddecfa;
+    top: -10px;
+}
+
+#ship
+{
+    position: absolute;
+    
+    height: 40px;
+
+    z-index: 100;
+    top: 323px;
+    margin-left: 208px;
+}
+
+
+#ice
+{
+    position: absolute;
+    top: -2px;
+    z-index: 150;
+    height: 600px
+}
+
+#text
+{
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top:75px;
+    
+    margin-left: 180px;
+
+
+    font-family: 'Recursive', sans-serif;
+    font-size: 50px;
+    color:#fefefe;
+    text-shadow: #9db4c9 2px 4px;
+    letter-spacing: 5.7px;
+}
+
+#subtext
+{
+    position: absolute;
+    font-size: 10px;
+    top: 129px;
+    margin-left: 260px;
+    letter-spacing: 0.4px;
+    
+    color: #77a4c6;
+}
+
+.subscribe{
+
+    
+
+    position: absolute;
+    top: 164px;
+    margin-left: 240px;
+
+    
+}
+
+.email_row
+{
+
+    overflow: hidden;
+
+    background-color: #ffffff;
+    height: 26px;
+    width: 177px;
+    
+    box-shadow: inset 1px 2px 2px gray;
+
+    border-radius: 3px;
+    padding: 7.5px 0px 0px 7px;
+    letter-spacing: 0.05px;
+    
+    
+    font-size: 10px;
+    box-sizing: border-box;
+    
+}
+
+button{
+
+    overflow: hidden;
+
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    box-sizing: border-box;
+    height: 26px;
+    top: 0;
+    margin-left: 184px;
+    width: 70px;
+    background-color: #f8a528;
+    
+
+    border: 1px solid gray;
+    box-shadow: inset 0px 0.5px 1px white;
+    
+    border-radius: 4px;
+    color: white;
+
+    font-size: 10px;
+}
+
+.datetime
+{
+    position: absolute;
+    box-sizing: border-box;
+    height: 52px;
+    width: 52px;
+
+
+
+    background-color: #b9d6ef;
+    border-radius: 26px;
+    z-index: 200;
+
+    font-family: 'Recursive', sans-serif;
+}
+
+#days
+{
+    top: 397px;
+    margin-left: 258px;
+}
+
+#hours
+{
+    top: 397px;
+    margin-left: 342px;
+}
+
+#mins
+{
+    top: 397px;
+    margin-left: 424px;
+}
+
+h3{
+    text-align: center;
+    margin-top: 15px;
+
+    color: #266b97;
+}
+
+h4{
+    color: white;
+}
+
+#days h4{
+
+    margin-left:2px;
+    letter-spacing: 2px;
+}
+
+#hours h4{
+
+    margin-left:-6px;
+    letter-spacing: 3px;
+}
+
+#mins h4{
+
+    margin-left:3px;
+    letter-spacing: 1px;
+}
