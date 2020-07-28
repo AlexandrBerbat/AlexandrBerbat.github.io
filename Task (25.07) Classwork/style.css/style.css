@@ -1,3 +1,7 @@
+html{
+    overflow: hidden;
+}
+
 body{
     background-color: #b9d6ef;
 }
@@ -105,7 +109,7 @@ body{
 .email_row
 {
 
-    overflow: hidden;
+
 
     background-color: #ffffff;
     height: 26px;
