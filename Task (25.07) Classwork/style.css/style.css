@@ -1,9 +1,12 @@
 html{
     overflow: hidden;
+    zoom: 132%;
+
 }
 
 body{
     background-color: #b9d6ef;
+    
 }
 
 .main
