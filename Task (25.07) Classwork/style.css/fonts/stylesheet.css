@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-Bold.eot');
+    src: local('Houschka Pro Bold'), local('HouschkaPro-Bold'),
+        url('HouschkaPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-Bold.woff2') format('woff2'),
+        url('HouschkaPro-Bold.woff') format('woff'),
+        url('HouschkaPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-ExtraBoldItalic.eot');
+    src: local('Houschka Pro ExtraBold Italic'), local('HouschkaPro-ExtraBoldItalic'),
+        url('HouschkaPro-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-ExtraBoldItalic.woff2') format('woff2'),
+        url('HouschkaPro-ExtraBoldItalic.woff') format('woff'),
+        url('HouschkaPro-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-BoldItalic.eot');
+    src: local('Houschka Pro Bold Italic'), local('HouschkaPro-BoldItalic'),
+        url('HouschkaPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-BoldItalic.woff2') format('woff2'),
+        url('HouschkaPro-BoldItalic.woff') format('woff'),
+        url('HouschkaPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-ThinItalic.eot');
+    src: local('Houschka Pro Thin Italic'), local('HouschkaPro-ThinItalic'),
+        url('HouschkaPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-ThinItalic.woff2') format('woff2'),
+        url('HouschkaPro-ThinItalic.woff') format('woff'),
+        url('HouschkaPro-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-Light.eot');
+    src: local('Houschka Pro Light'), local('HouschkaPro-Light'),
+        url('HouschkaPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-Light.woff2') format('woff2'),
+        url('HouschkaPro-Light.woff') format('woff'),
+        url('HouschkaPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-LightItalic.eot');
+    src: local('Houschka Pro Light Italic'), local('HouschkaPro-LightItalic'),
+        url('HouschkaPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-LightItalic.woff2') format('woff2'),
+        url('HouschkaPro-LightItalic.woff') format('woff'),
+        url('HouschkaPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-DemiBoldItalic.eot');
+    src: local('Houschka Pro DemiBold Italic'), local('HouschkaPro-DemiBoldItalic'),
+        url('HouschkaPro-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-DemiBoldItalic.woff2') format('woff2'),
+        url('HouschkaPro-DemiBoldItalic.woff') format('woff'),
+        url('HouschkaPro-DemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-DemiBold.eot');
+    src: local('Houschka Pro DemiBold'), local('HouschkaPro-DemiBold'),
+        url('HouschkaPro-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-DemiBold.woff2') format('woff2'),
+        url('HouschkaPro-DemiBold.woff') format('woff'),
+        url('HouschkaPro-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-Thin.eot');
+    src: local('Houschka Pro Thin'), local('HouschkaPro-Thin'),
+        url('HouschkaPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-Thin.woff2') format('woff2'),
+        url('HouschkaPro-Thin.woff') format('woff'),
+        url('HouschkaPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-ExtraBold.eot');
+    src: local('Houschka Pro Extra Bold'), local('HouschkaPro-ExtraBold'),
+        url('HouschkaPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-ExtraBold.woff2') format('woff2'),
+        url('HouschkaPro-ExtraBold.woff') format('woff'),
+        url('HouschkaPro-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-MediumItalic.eot');
+    src: local('Houschka Pro Medium Italic'), local('HouschkaPro-MediumItalic'),
+        url('HouschkaPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-MediumItalic.woff2') format('woff2'),
+        url('HouschkaPro-MediumItalic.woff') format('woff'),
+        url('HouschkaPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('HouschkaPro-Medium.eot');
+    src: local('Houschka Pro Medium'), local('HouschkaPro-Medium'),
+        url('HouschkaPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('HouschkaPro-Medium.woff2') format('woff2'),
+        url('HouschkaPro-Medium.woff') format('woff'),
+        url('HouschkaPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

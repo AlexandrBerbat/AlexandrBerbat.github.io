@@ -1,13 +1,13 @@
 @font-face 
 {
     font-family: "Houschka Pro Medium"; /* Имя шрифта */
-    src: url(./fonts/HouschkaPro-Medium.otf); /* Путь к файлу со шрифтом */
+    src: url("./fonts/HouschkaPro-Medium.woff2"); /* Путь к файлу со шрифтом */
    }
 
    @font-face 
 {
     font-family: "Houschka Pro Bold"; /* Имя шрифта */
-    src: url(./fonts/HouschkaPro-Bold.otf); /* Путь к файлу со шрифтом */
+    src: url("./fonts/HouschkaPro-Bold.woff2"); /* Путь к файлу со шрифтом */
    }
 
 
@@ -103,6 +103,9 @@ body{
 
 
     font-family: "Houschka Pro Bold";
+
+    font-style: normal;
+
     font-size: 71px;
     color:#fefefe;
     text-shadow: #9db4c9 2px 4px;
@@ -245,6 +248,7 @@ h4{
     
     color: white;
     font-family: "Houschka Pro Bold";
+    font-style: normal;
 
     margin-top: 3px;
 }
