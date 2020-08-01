@@ -1,0 +1,469 @@
+
+
+body
+{
+    background-image: url("../res/background.png");
+}
+
+.header
+{
+    display: flex;
+
+    box-sizing: border-box;
+    border: 1px gray;
+
+}
+
+.left_line
+{
+    width: 1589px;
+    height: 97px;
+
+    background: linear-gradient(90deg, #1D2024 0%, #18191D 100%);
+    box-sizing: border-box;
+    border: 1px rgba(128, 128, 128, 0.452) solid;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search
+{
+    margin-left: auto;
+    width: 426px;
+    height: 49px;   
+
+    background: #1D2024;
+    border-radius: 3px; 
+    box-sizing: border-box;
+    padding: 17px 0px 5px 17px;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 18px;
+
+
+
+    color: #717278;
+
+    margin-right: 40px;
+
+
+}
+
+.logo_img
+{
+    margin-left: 20px;
+}
+
+.left_line_line
+{
+    border: 1px rgba(128, 128, 128, 0.452) solid;
+    height: 49px;
+}
+
+.online_info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-right:48px;
+    margin-left: 20px;
+    
+
+    
+}
+.online_info h3
+{
+    padding: 0px;
+    margin: 0px;
+
+    font-family: Google Sans;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: gold;
+
+    /*margin-top: 29px;
+    margin-right: 77px;*/
+
+
+}
+
+.online_info h4
+{
+
+    padding: 0px;
+    margin: 0px;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: white;
+
+
+}
+
+
+
+.short_acc_info
+{
+    width: 329px;
+    height: 97px;
+
+    background: #1D2024;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    border: 1px rgba(128, 128, 128, 0.452) solid;
+}
+
+.player_icon
+{
+    margin-left: 24px;
+    align-self: flex-start;
+    margin-top: 25px;
+}
+
+.short_acc_info h4
+{
+    padding: 0px;
+    margin: 0px;
+    margin-top: -38px;
+
+    font-family: Google Sans;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    margin-left: -30px;
+
+
+
+}
+
+.short_acc_info h3
+{
+    padding: 0px;
+    margin: 0px;
+
+
+    
+
+    font-family: Google Sans;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    
+    color: gold;
+
+}
+
+.short_acc_info h3::before
+{
+    content: "•";
+    color: gold;
+    margin-right: 5px;
+}
+
+
+.left_panel
+{
+    position: absolute;
+    width: 135px;
+    height: 983px;
+    left: 0px;
+    top: 97px;
+
+    background: #1D2024;
+    color: white;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border: 1px rgba(128, 128, 128, 0.452) solid;
+    background: #1B1D21;
+}
+
+.panel_button
+{
+    width: 135px;
+    height: 100px;
+    text-align: center;
+    
+
+    background-color: #1D2024;
+
+    border-top: 2px  #1B1D21 solid; 
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.main
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 145px;
+    width: 1429px;
+
+
+    /**********/
+    color: white;
+    font-size: 25px;
+    /**********/
+
+}
+
+.main_section.t1
+{
+    width: 946px;
+    height: 420px;
+
+    background: rgba(29, 32, 36, 0.5);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(20px);
+
+    border: 2px white solid;
+    margin: 41px 41px 0px 41px;
+
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main_section.t2
+{
+    width: 362px;
+    height: 420px;
+
+    background: rgba(29, 32, 36, 0.5);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(20px);
+
+    border: 2px white solid;
+    margin: 41px 0px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.right_panel
+{
+    position: absolute;
+    width: 324px;
+    height: 983px;
+    left: 1575px;
+    top: 138px;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.match
+{
+    width: 315;
+    height: 129px;
+    margin-bottom: 18px;
+
+    background: rgba(29, 32, 36, 0.5);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(20px);
+
+    border: 2px white solid;
+    color: white;
+}
+
+.top_line
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.submain
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bot_line
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+table
+{
+    width: 95%;
+    margin-left: 40px;
+}
+tr:nth-child(2n)
+{
+    background: rgba(42, 43, 49, 0.39);
+    
+}
+
+#profile_stats h3{
+    padding: 0;
+    margin: 0;
+}
+
+#profile_stats h4{
+    padding: 0;
+    margin: 0;
+
+}
+
+#profile_stats h5{
+    padding: 0;
+    margin: 0;
+}
+
+#profile_stats #top_line{
+    text-align: center;
+}
+
+.profile_info
+{
+    margin-top: 40px;
+    margin-left: 160px;
+    width: 360px;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    
+}
+
+.winrate
+{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px 10px 20px;
+}
+
+.profile_stats_additional
+{
+
+    margin-top: 40px;
+    height: 360px;
+
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+#profile_stats #bot_line{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items:flex-end;
+    margin-bottom: 20px;
+}
+
+#daily_price h3
+{
+    padding: 0;
+    margin: 0;
+
+}
+
+#daily_price h4
+{
+    padding: 0;
+    margin: 0;
+
+}
+
+#daily_price #top_line{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#daily_price #submain
+{
+
+    height: 100%;
+    margin: 40px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#sec_line
+{
+    margin-top: -10px;
+}
+
+#price_bayonet
+{
+    color: gold;
+    
+}
+
+#subsubmain
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submatch
+{
+    border: 2px black solid;
+}
+
+.match
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.backdrop
+{
+
+    width: 315px;
+    height: 50px;
+    margin-left: 4px;
+
+    background: rgba(29, 32, 36, 0.6);
+    mix-blend-mode: normal;
+    border-radius: 3px;
+
+    z-index: 100;
+}
+
+.match h4
+{
+    
+    color: gold;
+}
