@@ -3,6 +3,7 @@
 body
 {
     background-image: url("../res/background.png");
+    overflow: hidden;
 }
 
 .header
@@ -464,6 +465,6 @@ tr:nth-child(2n)
 
 .match h4
 {
-    
+
     color: gold;
 }
