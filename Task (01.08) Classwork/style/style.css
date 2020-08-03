@@ -1,9 +1,13 @@
-
+@font-face 
+{
+    font-family: "Google Sans";
+    src: url("../fonts/GoogleSans-Regular.ttf");
+}
 
 body
 {
-    background-image: url("../res/background.png");
-    overflow: hidden;
+    background-image: url("../res/background.jpg");
+    /*overflow: hidden;*/
 }
 
 .header
@@ -17,7 +21,7 @@ body
 
 .left_line
 {
-    width: 1589px;
+    width: 1591px;
     height: 97px;
 
     background: linear-gradient(90deg, #1D2024 0%, #18191D 100%);
@@ -27,41 +31,80 @@ body
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+}
+
+.subline
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.search_line
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search_sign
+{
+    position: absolute;
+    height: 10px;
+    top: 44px;
+    left: 1305px;
+    z-index: 100;
 }
 
 .search
 {
-    margin-left: auto;
+    
+    
     width: 426px;
     height: 49px;   
 
     background: #1D2024;
     border-radius: 3px; 
     box-sizing: border-box;
-    padding: 17px 0px 5px 17px;
+    padding: 16px 0px 5px 21px;
 
-    font-family: Google Sans;
+    font-family: Google Sans, solid;
     font-size: 14px;
     line-height: 18px;
+    letter-spacing: 0.5px;
+
 
 
 
     color: #717278;
 
-    margin-right: 40px;
+    margin-right: 64px;
+    border: 0.5px solid gray;
 
 
 }
 
 .logo_img
 {
-    margin-left: 20px;
+    margin-left: 34px;
+    margin-top:6px;
 }
+
+.logo_butt
+{
+    height: 30px;
+    margin-left: -1px;
+    margin-top: 17.5px;
+}
+
+
 
 .left_line_line
 {
     border: 1px rgba(128, 128, 128, 0.452) solid;
     height: 49px;
+    margin-right: 23px;
 }
 
 .online_info
@@ -71,8 +114,10 @@ body
     align-items: center;
     justify-content: center;
 
-    margin-right:48px;
-    margin-left: 20px;
+    margin-right:44px;
+    margin-left: 26px;
+    
+    letter-spacing: px;
     
 
     
@@ -100,12 +145,13 @@ body
     padding: 0px;
     margin: 0px;
 
-    font-family: Google Sans;
+    font-family: "Google Sans";
     font-size: 14px;
     line-height: 16px;
     
     color: white;
 
+    
 
 }
 
@@ -127,29 +173,32 @@ body
     box-sizing: border-box;
 
     border: 1px rgba(128, 128, 128, 0.452) solid;
+
+    
 }
 
 .player_icon
 {
+    height: 60px;
     margin-left: 24px;
     align-self: flex-start;
-    margin-top: 25px;
+    margin-top: 16px;
 }
 
 .short_acc_info h4
 {
     padding: 0px;
     margin: 0px;
-    margin-top: -38px;
+    margin-top: -49px;
 
     font-family: Google Sans;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 16px;
     display: flex;
     align-items: center;
 
     color: white;
-    margin-left: -30px;
+    margin-left: -60px;
 
 
 
@@ -170,14 +219,24 @@ body
     align-items: center;
     
     color: gold;
+    margin-top: 6px;
+    margin-left: -5px;
 
 }
 
 .short_acc_info h3::before
 {
-    content: "•";
+    content: url(../res/else/CCsign.png);
     color: gold;
     margin-right: 5px;
+}
+
+.logo_butt2
+{
+    height: 30px;
+    position: relative;
+    top: -37px;
+    left: 145px;
 }
 
 
@@ -204,7 +263,7 @@ body
 .panel_button
 {
     width: 135px;
-    height: 100px;
+    height: 102px;
     text-align: center;
     
 
@@ -213,6 +272,107 @@ body
     border-top: 2px  #1B1D21 solid; 
     box-sizing: border-box;
     padding-top: 40px;
+
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: center;
+}
+
+#active_button
+{
+    height: 110px;
+}
+
+#butt2
+{
+    padding-bottom: 15px;
+}
+
+#butt3
+{
+    padding-bottom: 13px;
+}
+#butt3 img
+{
+    height: 38px;
+    width: 47px;
+    margin-left: 42px;
+    margin-top: -1px;
+    margin-bottom: 4px;
+}
+
+#butt4
+{
+    padding-bottom: 12px;
+}
+
+#butt4 img
+{
+    height: 38px;
+    width: 52px;
+
+    margin-bottom: 8px;
+}
+
+#butt5 
+{
+    padding-bottom: 5px;
+}
+
+#butt5 img
+{
+    height: 50px;
+    width: 45px;
+
+    margin-left:44px;
+    margin-bottom: 4px;
+}
+
+#butt6
+{
+    padding-bottom: 6px;
+}
+
+#butt6 img
+{
+    height: 40px;
+    width: 44px;
+
+    margin-left: 46px;
+    margin-bottom: 6px;
+}
+
+#butt7
+{
+    padding-bottom: 8px;
+}
+
+#butt7 img
+{
+    width: 45px;
+    height: 45px;
+
+    margin-left: 45px;
+}
+
+.panel_button img
+{
+    height: 50px;
+    width: 55px;
+    margin-left: 40px;
+    
+}
+
+.panel_button h4
+{
+    position: relative;
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    top:-17px;
+    left: -2px;
 }
 
 .main
