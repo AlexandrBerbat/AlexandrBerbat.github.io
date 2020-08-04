@@ -75,20 +75,55 @@
     <div class="main">
 
         <div class="main_section t1" id="new_game">
-
+            <div class="custom_line" id="line_new_game_1"></div>
             <div class="top_line">
-                <h5>Создать игру</h5>
-                <h5>Присоединиться</h5>
+                <h5 id="active_line_new_game">Создать игру</h5>
+                <h5 id="unactive_line_new_game">Присоединиться</h5>
             </div>
 
-            <h5>1.Выберите режим</h5>
-            <div class="submain">
-                <div>1x1 AIM</div>
-                <div>2x2 AIM</div>
-                <div>5x5 Matchmaking</div>
+            <h5 class="point_name" id="choose_mode">1. Выберите режим</h5>
+            <div class="submain" id="game_modes">
+                <div class="game_mode" id="gm_1x1">
+                    <h4 class="mode_name">1x1 AIM</h4>
+                    <div class="custom_line_mode"></div>
+                    <img class="players_icons" src="./res/player_icons/MyIcon.png">
+                    <h5>Вы готовы</h5>
+                </div>
+                <div class="game_mode" id="gm_2x2">
+                    <h4 class="mode_name">2x2 AIM</h4>
+                    <div class="custom_line_mode"></div>
+                    <div class="group_icons">
+                        <img class="players_icons" src="./res/player_icons/MyIcon.png">
+                        <img class="players_icons" src="./res/players/le40z22/Group 2.2le4oz22.png">
+                    </div>
+                    <div class="group_nicks">
+                        <h5>Вы готовы</h5>
+                        <h5>le4os22</h5>
+                    </div>
+                </div>
+                <div class="game_mode" id="gm_5x5">
+                    <h4 class="mode_name">5x5 Matchmaking</h4>
+                    <div class="custom_line_mode"></div>
+                    <div class="group_icons">
+                        <img class="players_icons" src="./res/player_icons/MyIcon.png">
+                        <img class="players_icons" src="./res/players/SaWyer/Group 2.1SaWyer.png">
+                        <img class="players_icons" src="./res/players/empty_icon.png">
+                        <img class="players_icons" src="./res/players/empty_icon.png">
+                        <img class="players_icons" src="./res/players/empty_icon.png">
+                    </div>
+                    <div class="group_nicks">
+                        <h5>Вы готовы</h5>
+                        <h5>SaWyer</h5>
+                        <h5>Пригласите</h5>
+                        <h5>Пригласите</h5>
+                        <h5>Пригласите</h5>
+                    </div>
+                </div>
             </div>
 
-            <h5>2.Сделайте ставку</h5>
+            <div class="custom_line_new_game_2"></div>
+
+            <h5 class="point_name" id="make_rate">2. Сделайте ставку</h5>
             <div class="bot_line">
 
                 <div class="value">500 СС</div>
@@ -103,14 +138,20 @@
 
         </div>
 
+
+
+
         <div class="main_section t2" id="profile_stats">
 
             <h4 id="top_line">Профиль</h4>
+            <div class="custom_line_mode_profile"></div>
+            <img class="profile_big_avatar" src="res/players/MyIcon.png">
             <div class="profile_info">
                 <h4 id="nickname">OceanD</h4>
                 <h4 id="game_status">Статус: В игре</h4>
                 <h4 id="rank_status">Ранг: 1900 Rank</h4>
             </div>
+            <div class="custom_line_mode_profile"></div>
             <div class="winrate">
                 <h4>Винрейт: <h5 id="winrate_icon">62%</h5>
                 </h4>
@@ -126,62 +167,67 @@
             <h4 id="bot_line">Полный профиль</h4>
         </div>
 
+
+
+
         <div class="main_section t1" id="top_results">
             <div class="top_line">
                 <h5>Топ игроков 1х1</h5>
                 <h5>Топ игроков 5х5</h5>
             </div>
 
+            <div class="custom_active_line_top_pl"></div>
+
             <div class="main_table">
                 <table>
                     <tr>
                         <td></td>
-                        <td>Игрок</td>
+                        <td >Игрок</td>
                         <td>Винрейт</td>
                         <td>Рейтинг</td>
                         <td>Выиграно СС</td>
                     </tr>
                     <tr>
                         <td>1.</td>
-                        <td>le40s22</td>
+                        <td class="top_list_nick" id="top_list_nick1">le40s22</td>
                         <td>87%</td>
-                        <td>3200 Rank</td>
-                        <td>150 000 CC</td>
+                        <td class="top_list_rank" id="top1_rank">3200 Rank</td>
+                        <td class="top_list_coins">150 000 CC</td>
                     </tr>
                     <tr>
                         <td>2.</td>
-                        <td>VanyaKiller</td>
+                        <td class="top_list_nick" id="top_list_nick2">VanyaKiller</td>
                         <td>83%</td>
-                        <td>3150 Rank</td>
-                        <td>125 000 CC</td>
+                        <td class="top_list_rank" id="top1_rank">3150 Rank</td>
+                        <td class="top_list_coins">125 000 CC</td>
                     </tr>
                     <tr>
                         <td>3.</td>
-                        <td>SaWyer</td>
+                        <td class="top_list_nick" id="top_list_nick3">SaWyer</td>
                         <td>81%</td>
-                        <td>3050 Rank</td>
-                        <td>110 000 CC</td>
+                        <td class="top_list_rank" id="top1_rank">3050 Rank</td>
+                        <td class="top_list_coins">110 000 CC</td>
                     </tr>
                     <tr>
                         <td>4.</td>
-                        <td>Shadow52</td>
+                        <td class="top_list_nick" id="top_list_nick4">Shadow52</td>
                         <td>76%</td>
-                        <td>2900 Rank</td>
-                        <td>98 000 CC</td>
+                        <td class="top_list_rank" id="top2_rank">2900 Rank</td>
+                        <td class="top_list_coins">98 000 CC</td>
                     </tr>
                     <tr>
                         <td>5.</td>
-                        <td>F1stM4n</td>
+                        <td class="top_list_nick" id="top_list_nick5">F1stM4n</td>
                         <td>72%</td>
-                        <td>2450 Rank</td>
-                        <td>84 000 CC</td>
+                        <td class="top_list_rank" id="top3_rank">2450 Rank</td>
+                        <td class="top_list_coins">84 000 CC</td>
                     </tr>
                     <tr>
                         <td>56.</td>
-                        <td>OceanD</td>
+                        <td class="top_list_nick" id="top_list_nick6">OceanD</td>
                         <td>62%</td>
                         <td></td>
-                        <td>30 000 CC</td>
+                        <td class="top_list_coins">30 000 CC</td>
                     </tr>
                 </table>
             </div>

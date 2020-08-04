@@ -4,10 +4,16 @@
     src: url("../fonts/GoogleSans-Regular.ttf");
 }
 
+@font-face 
+{
+    font-family: "Gotham Pro";
+    src: url("../fonts/GothamPro.ttf");
+}
+
 body
 {
     background-image: url("../res/background.jpg");
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .header
@@ -282,6 +288,7 @@ body
 #active_button
 {
     height: 110px;
+    border-bottom: 2px solid gold;
 }
 
 #butt2
@@ -398,30 +405,35 @@ body
     background: rgba(29, 32, 36, 0.5);
     mix-blend-mode: normal;
     backdrop-filter: blur(20px);
+    box-sizing: border-box;
 
-    border: 2px white solid;
-    margin: 41px 41px 0px 41px;
+    border: 1px gray solid;
+    margin: 41px 41px 0px 32px;
 
 
     display: flex;
     flex-direction: column;
 
+    border-radius: 3px;
+
 }
 
 .main_section.t2
 {
-    width: 362px;
+    width: 360px;
     height: 420px;
 
     background: rgba(29, 32, 36, 0.5);
     mix-blend-mode: normal;
     backdrop-filter: blur(20px);
 
-    border: 2px white solid;
+    border: 1px gray solid;
     margin: 41px 0px 0px 0px;
 
     display: flex;
     flex-direction: column;
+
+    border-radius: 3px;
 }
 
 .right_panel
@@ -453,9 +465,174 @@ body
 
 .top_line
 {
+    height: 50px;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    border-bottom: 2px solid #2A2B31;;
+
+    font-family: Google Sans;
+    font-size: 16px;
+    line-height: 16px;
+
+}
+
+.top_line h5
+{
+    padding: 17px 0px 7px 0px;
+    margin: 0px;
+}
+
+#new_game
+{
+
+}
+
+#line_new_game_1
+{
+    position: absolute;
+    width: 472px;
+    height: 2px;
+    left: 0px;
+    top: 50px;
+
+    background: linear-gradient(90deg, #FFD128 0%, #FFAE25 100%);
+    mix-blend-mode: normal;
+    border-radius: 0px;
+}
+
+#active_line_new_game
+{
+    margin-left: 4px;
+    letter-spacing: 0.7px;
+}
+
+#unactive_line_new_game
+{
+    margin-right: -9px;
+    letter-spacing: 1.1px;
+}
+
+.point_name
+{
+    padding: 0px 0px 0px 24px;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#choose_mode
+{
+    margin-top: 17px;
+    letter-spacing: 0.5px;
+}
+
+#make_rate
+{
+    margin-top: 18px;
+    letter-spacing: 0.4px;
+}
+
+#game_modes
+{
+    height: 180px;
+
+}
+
+.game_mode
+{
+
+    padding-top: 9px;
+
+    background: #1B1D21;
+    border-radius: 3px;
+    border: 1px solid rgba(51, 50, 50, 0.288);
+}
+
+.game_mode h4, h5
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#gm_1x1
+{
+    width: 140px;
+    height: 159.86px;
+
+
+
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+}
+#gm_1x1 h5
+{
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.41);
+}
+
+#gm_2x2
+{
+    width: 219px;
+    height: 160px;
+
+}
+
+#gm_5x5
+{
+    width: 494px;
+    height: 159.86px;
+
+
+}
+
+.mode_name
+{
+    font-family: Gotham Pro;
+    font-size: 14px;
+    line-height: 16px;
+    color: gold;
+    text-align: center;
+    
+}
+
+.custom_line_mode
+{
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(71,71,71,1) 31%, rgba(102,102,102,1) 48%, rgba(89,89,89,1) 64%, rgba(19, 19, 19, 0) 100%);
+    width: 100%;
+
+    margin: 10px 0px 20px 0px;
+}
+
+.group_icons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.group_nicks
+{
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    color: rgba(255, 255, 255, 0.41);
+}
+
+.players_icons
+{
+    height: 60px;
 }
 
 .submain
@@ -465,22 +642,204 @@ body
     justify-content: space-around;
 }
 
+.custom_line_new_game_2
+{
+    height: 2px;
+    background: rgba(51, 50, 50, 0.288);
+    width: 100%;
+}
+
+
+#make_rate
+{
+    padding-bottom: 30px;
+}
+
+.value
+{
+    width: 78.73px;
+    height: 50px;
+
+    border: 1px solid rgba(88, 88, 88, 0.514);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1B1D21;
+    border-radius: 3px;
+}
+
+.your_own_value
+{
+
+    width: 236px;
+    height: 50px;
+
+    border: 1px solid rgba(88, 88, 88, 0.514);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1B1D21;
+    border-radius: 3px;
+
+    color: #797A7C;
+
+}
+
+.line_separation
+{
+
+    height: 53px;
+    width: 2px;
+
+    background: gold;
+}
+
+.start_game
+{
+    width: 185px;
+    height: 53px;
+
+    background: linear-gradient(0deg, #FFD128 -38.68%, #FFAE25 100%), #1B1D21;
+    box-shadow: 1px 1px 20px rgba(255, 194, 38, 0.3);
+    border-radius: 3px;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1C1E23;
+}
+
+
+.custom_active_line_top_pl
+{
+
+    position: absolute;
+    width: 472px;
+    height: 2px;
+    left: 0px;
+    top: 50px;
+
+    background: linear-gradient(90deg, #FFD128 0%, #FFAE25 100%);
+    mix-blend-mode: normal;
+    border-radius: 0px;
+}
+
+
 .bot_line
 {
     width: 100%;
     display: flex;
     justify-content: space-around;
+
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 table
 {
-    width: 95%;
-    margin-left: 40px;
+    width: 100%;
+    height: 300px;
+    
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
 }
-tr:nth-child(2n)
+
+.main_table
+{
+    border-spacing: 5px;
+}
+
+td{
+    text-align: center;
+}
+tr:nth-child(odd)
 {
     background: rgba(42, 43, 49, 0.39);
     
+}
+
+.top_list_nick
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+#top_list_nick1::before
+{
+
+    content: url("../res/players/le40z22/le4oz22_little.png");
+    margin-right: 25px;
+    
+}
+#top_list_nick2::before
+{
+    content: url("../res/players/VanyaKiller/VanyaKiller_little.png");
+    margin-right: 12px;
+    
+}
+#top_list_nick3::before
+{
+    content: url("../res/players/SaWyer/SaWyer_little.png");
+    margin-right: 30px;
+    
+}
+#top_list_nick4::before
+{
+    content: url("../res/players/Shadow52/Shadow52_little.png");
+    margin-right: 12px;
+    
+}
+#top_list_nick5::before
+{
+    content: url("../res/players/F1stM4n/F1stM4n_little.png");
+    margin-right: 25px;
+}
+#top_list_nick6::before
+{
+    content: url("../res/players/MyIcon_little.png");
+    margin-right: 25px;
+}
+
+
+#top1_rank::before
+{
+    content: url("../res/rank/image.png")
+}
+
+#top2_rank::before
+{
+    content: url("../res/rank/image2_1.png")
+}
+
+#top3_rank::before
+{
+    content: url("../res/rank/image2_2.png")
+}
+
+.top_list_coins::before
+{
+    content: url("../res/else/CCsign.png")
+}
+
+.profile_big_avatar
+{
+    position: absolute;
+    width: 120px;
+    height: 110px;
+
+    top: 60px;
+    left: 20px;
 }
 
 #profile_stats h3{
@@ -499,8 +858,46 @@ tr:nth-child(2n)
     margin: 0;
 }
 
+#profile_stats
+{
+    background: rgba(29, 32, 36, 0.6);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(20px);
+    
+}
+
 #profile_stats #top_line{
     text-align: center;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile_info #nickname
+{
+    font-family: Google Sans;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+
+.profile_info #game_status
+{
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+.profile_info #rank_status
+{
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 25px;
 }
 
 .profile_info
@@ -513,7 +910,17 @@ tr:nth-child(2n)
     flex-direction: column;
     align-items: flex-start;
 
+
     
+}
+
+.custom_line_mode_profile
+{
+    height: 4px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(71,71,71,1) 31%, rgba(102,102,102,1) 48%, rgba(89,89,89,1) 64%, rgba(19, 19, 19, 0) 100%);
+    width: 100%;
+
+    margin: 0px 0px 0px 0px;
 }
 
 .winrate
