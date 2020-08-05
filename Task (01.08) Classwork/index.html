@@ -148,13 +148,24 @@
             <img class="profile_big_avatar" src="res/players/MyIcon.png">
             <div class="profile_info">
                 <h4 id="nickname">OceanD</h4>
-                <h4 id="game_status">Статус: В игре</h4>
+                <div class="game_status_line">
+                    <div id="game_status">
+                        <h5 id="status_online">Статус:</h5> 
+                        <h5>В игре</h5>
+                    </div>
+                </div>
                 <h4 id="rank_status">Ранг: 1900 Rank</h4>
             </div>
             <div class="custom_line_mode_profile"></div>
             <div class="winrate">
-                <h4>Винрейт: <h5 id="winrate_icon">62%</h5>
-                </h4>
+                <div id="winrate_name">Винрейт:</div>
+                <div class="winrate_progress"> 
+                    <div class="winrate_progress_bar">
+                        <div class="winrate_progress_bar_completed"></div>
+                    </div>
+                    <h5 id="winrate_icon">62%</h5>
+                    </div>
+
             </div>
             <div class="profile_stats_additional">
                 <h4>Total kills: 1425</h4>
@@ -182,7 +193,7 @@
                 <table>
                     <tr>
                         <td></td>
-                        <td >Игрок</td>
+                        <td>Игрок</td>
                         <td>Винрейт</td>
                         <td>Рейтинг</td>
                         <td>Выиграно СС</td>

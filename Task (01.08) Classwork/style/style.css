@@ -413,6 +413,7 @@ body
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 
     border-radius: 3px;
 
@@ -465,7 +466,7 @@ body
 
 .top_line
 {
-    height: 50px;
+    height: 64px;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -481,6 +482,7 @@ body
 {
     padding: 17px 0px 7px 0px;
     margin: 0px;
+    
 }
 
 #new_game
@@ -504,6 +506,7 @@ body
 #active_line_new_game
 {
     margin-left: 4px;
+    
     letter-spacing: 0.7px;
 }
 
@@ -524,24 +527,28 @@ body
 
 #choose_mode
 {
-    margin-top: 17px;
+    margin-top: 15px;
     letter-spacing: 0.5px;
 }
 
 #make_rate
 {
-    margin-top: 18px;
+    margin-top: 10px;
     letter-spacing: 0.4px;
 }
 
 #game_modes
 {
-    height: 180px;
+    height: 240px;
+    margin-top: 20px;
+    display: flex;
 
 }
 
 .game_mode
 {
+
+    box-sizing: border-box;
 
     padding-top: 9px;
 
@@ -554,6 +561,25 @@ body
 {
     padding: 0px;
     margin: 0px;
+
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.game_mode h5
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.game_mode h5
+{
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: rgba(255, 255, 255, 0.41);
 }
 
 #gm_1x1
@@ -561,6 +587,8 @@ body
     width: 140px;
     height: 159.86px;
 
+    margin-left: 10px;
+    
 
 
     display: flex;
@@ -574,6 +602,8 @@ body
     font-size: 12px;
     line-height: 14px;
     color: rgba(255, 255, 255, 0.41);
+
+    padding-bottom: px;
 }
 
 #gm_2x2
@@ -581,6 +611,7 @@ body
     width: 219px;
     height: 160px;
 
+    border: 1px solid gold;
 }
 
 #gm_5x5
@@ -588,7 +619,7 @@ body
     width: 494px;
     height: 159.86px;
 
-
+    margin-right: 10px;
 }
 
 .mode_name
@@ -652,12 +683,17 @@ body
 
 #make_rate
 {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+}
+
+.bot_line
+{
+    width: 900px;
 }
 
 .value
 {
-    width: 78.73px;
+    width: 75.73px;
     height: 50px;
 
     border: 1px solid rgba(88, 88, 88, 0.514);
@@ -667,6 +703,7 @@ body
 
     background: #1B1D21;
     border-radius: 3px;
+    margin-bottom: 23px;
 }
 
 .your_own_value
@@ -780,35 +817,41 @@ tr:nth-child(odd)
 
     content: url("../res/players/le40z22/le4oz22_little.png");
     margin-right: 25px;
+    margin-top: 5px;
     
 }
 #top_list_nick2::before
 {
     content: url("../res/players/VanyaKiller/VanyaKiller_little.png");
     margin-right: 12px;
+    margin-top: 5px;
     
 }
 #top_list_nick3::before
 {
     content: url("../res/players/SaWyer/SaWyer_little.png");
     margin-right: 30px;
+    margin-top: 5px;
     
 }
 #top_list_nick4::before
 {
     content: url("../res/players/Shadow52/Shadow52_little.png");
     margin-right: 12px;
+    margin-top: 5px;
     
 }
 #top_list_nick5::before
 {
     content: url("../res/players/F1stM4n/F1stM4n_little.png");
     margin-right: 25px;
+    margin-top: 5px;
 }
 #top_list_nick6::before
 {
     content: url("../res/players/MyIcon_little.png");
     margin-right: 25px;
+    margin-top: 5px;
 }
 
 
@@ -827,9 +870,20 @@ tr:nth-child(odd)
     content: url("../res/rank/image2_2.png")
 }
 
+.top_list_rank
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .top_list_coins::before
 {
-    content: url("../res/else/CCsign.png")
+    content: url("../res/else/CCsign.png");
+    margin-right: 5px;
+    margin-top: 20px;
+
+
 }
 
 .profile_big_avatar
@@ -841,6 +895,8 @@ tr:nth-child(odd)
     top: 60px;
     left: 20px;
 }
+
+
 
 #profile_stats h3{
     padding: 0;
@@ -900,6 +956,19 @@ tr:nth-child(odd)
     margin-bottom: 25px;
 }
 
+#game_status
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#status_online::after
+{
+    content: url("../res/else/onlinestatussign.png");
+    margin: 0px 5px 0px 5px;
+}
+
 .profile_info
 {
     margin-top: 40px;
@@ -925,16 +994,51 @@ tr:nth-child(odd)
 
 .winrate
 {
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 20px 10px 20px;
+ 
+    /*display: flex;
+    justify-content: space-between;*/
+    margin: 20px 0px 10px 20px;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
 }
+
+.winrate_progress_bar
+{
+    position: absolute;
+    width: 265px;
+    height: 6px;
+    top: 230px;
+    
+    background: #1B1D21;
+    border: 1px solid #2A2B31;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    
+}
+.winrate_progress_bar_completed
+{
+    position: absolute;
+    width: 184px;
+    height: 6px;
+
+    background: linear-gradient(270deg, #FFD128 0%, #FFAE25 100%), #1B1D21;
+    border-radius: 3px;
+}
+#winrate_icon
+{
+    position: absolute;
+    top: 225px;
+    left: 310px;
+}
+
 
 .profile_stats_additional
 {
 
-    margin-top: 40px;
+    margin: 40px 40px 0px 40px;
     height: 360px;
 
     font-size: 18px;
@@ -943,6 +1047,12 @@ tr:nth-child(odd)
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.57);
     
 }
 
@@ -952,7 +1062,13 @@ tr:nth-child(odd)
     justify-content: center;
     align-items:flex-end;
     margin-bottom: 20px;
+
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
 }
+
+
 
 #daily_price h3
 {
@@ -971,6 +1087,10 @@ tr:nth-child(odd)
 #daily_price #top_line{
     text-align: center;
     margin-top: 20px;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 #daily_price #submain
@@ -983,17 +1103,55 @@ tr:nth-child(odd)
     align-items: center;
     justify-content: space-between;
 
+    background-image: url("../res/daily_price/DailyGift.png");
+
 }
+
+#subsubmain #third_line
+{
+    font-family: Google Sans;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+
+    color: #EB5757;
+}
+
+#subsubmain h4
+{
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
 
 #sec_line
 {
     margin-top: -10px;
+
+    font-family: Google Sans;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.05em;
 }
 
 #price_bayonet
 {
     color: gold;
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
     
+}
+
+#last_line
+{
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 #subsubmain
