@@ -437,32 +437,7 @@ body
     border-radius: 3px;
 }
 
-.right_panel
-{
-    position: absolute;
-    width: 324px;
-    height: 983px;
-    left: 1575px;
-    top: 138px;
 
-
-    display: flex;
-    flex-direction: column;
-}
-
-.match
-{
-    width: 315;
-    height: 129px;
-    margin-bottom: 18px;
-
-    background: rgba(29, 32, 36, 0.5);
-    mix-blend-mode: normal;
-    backdrop-filter: blur(20px);
-
-    border: 2px white solid;
-    color: white;
-}
 
 .top_line
 {
@@ -881,7 +856,7 @@ tr:nth-child(odd)
 {
     content: url("../res/else/CCsign.png");
     margin-right: 5px;
-    margin-top: 20px;
+    
 
 
 }
@@ -1162,17 +1137,176 @@ tr:nth-child(odd)
     align-items: center;
 }
 
-#submatch
+
+/*Right panel*/
+
+
+
+.right_panel
 {
-    border: 2px black solid;
+    position: absolute;
+    width: 315px;
+    height: 983px;
+    left: 1590px;
+    top: 138px;
+    box-sizing: border-box;
+
+
+    display: flex;
+    flex-direction: column;
 }
 
 .match
 {
+    width: 315;
+    height: 129px;
+    margin-bottom: 18px;
+
+    background: rgba(29, 32, 36, 0.5);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(20px);
+
+    color: white;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    border: 1px gray solid;
+
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
 }
+
+.match h4
+{
+
+    font-family: Google Sans;
+    font-size: 12px;
+    line-height: 14px;
+
+    padding: 0px;
+    margin: 0px;
+
+    color: gold;
+}
+
+.block_rp
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_left
+{
+    margin-left: 5px;
+}
+
+.block_right
+{
+    margin-right: 15px;
+}
+
+.vs
+{
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.23);
+
+
+    margin-left: 5px;
+}
+
+.vs h3
+{
+
+    padding: 0px;
+    margin: 0px;
+
+    font-family: Google Sans;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: white;
+}
+
+.opponent_image
+{
+    width: 44px;
+    height: 44px;
+}
+
+
+#match1
+{
+    background-image: url("../res/match_bg/match1_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#match2
+{
+    background-image: url("../res/match_bg/match2_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#match3
+{
+    background-image: url("../res/match_bg/match1_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#match4
+{
+    background-image: url("../res/match_bg/match2_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#match5
+{
+    background-image: url("../res/match_bg/match1_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#match6
+{
+    background-image: url("../res/match_bg/match2_bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+.custom_line_rp
+{
+    position: absolute;
+    height: 859px;
+    width: 3px;
+    right: 340px;
+ 
+    background: #2E2F35;    
+    mix-blend-mode: normal;
+    border-radius: 0px;
+}
+
+.custom_line_rp_active
+{
+    position: absolute;
+    width: 5px;
+    height: 129px;
+    z-index: 100;
+
+    background: gold;
+    border-radius: 2px;
+}
+
 
 .backdrop
 {
@@ -1188,8 +1322,4 @@ tr:nth-child(odd)
     z-index: 100;
 }
 
-.match h4
-{
 
-    color: gold;
-}
