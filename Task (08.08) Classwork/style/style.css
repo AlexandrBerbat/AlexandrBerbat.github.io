@@ -1,0 +1,206 @@
+.main
+{
+    width: 1000px;
+    height: 400px;
+    background-color: darkblue;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.circle
+{
+
+    position: absolute;
+
+    top: 237px;
+    left: 70px;
+
+    height: 50px;
+    width: 50px;
+    border: 5px solid black;
+    border-radius: 50px;
+
+    background-color: orange;
+
+
+    animation: jumping 10s ease infinite;
+}
+
+.stage
+{
+    border: 3px solid black;
+
+    width: 100px;
+
+    background-color: green;
+
+
+
+}
+
+#stage1
+{
+    height: 100px;
+    animation: stage_transform1 10s ease infinite;
+    
+}
+#stage2
+{
+    height: 150px;
+    animation: stage_transform2 10s ease infinite;
+}
+#stage3
+{
+    height: 200px;
+}
+#stage4
+{
+    height: 250px;
+    animation: stage_transform4 10s ease infinite;
+}
+#stage5
+{
+    height: 300px;
+    animation: stage_transform5 10s ease infinite;
+}
+
+@keyframes jumping
+{
+    0%
+    {
+        top: 237px;
+        left: 70px;
+    }
+    6%
+    {
+        top: 170px;
+        left: 220px;
+    }
+    12%
+    {
+        top:187px;
+        left:280px;
+    }
+    17%
+    {
+        top: 120px;
+        left: 450px;
+    }
+    24%
+    {
+        top: 137px;
+        left: 470px;
+    }
+    29%
+    {
+        top: 70px;
+        left: 650px;
+    }
+    35%
+    {
+        top: 87px;
+        left: 670px;
+    }
+    41%
+    {
+        top: 20px;
+        left: 850px;
+    }
+    46%
+    {
+        top: 37px;
+        left: 860px;
+    }
+    52%
+    {
+        top: 237px;
+        left: 860px;
+    }
+    58%
+    {
+        top: 170px;
+        left: 720px;
+    }
+    63%
+    {
+        top: 187px;
+        left: 670px;
+    }
+    69%
+    {
+        top: 120px;
+        left: 530px;
+
+    }
+    74%
+    {
+        top: 137px;
+        left: 470px;
+    }
+    79%
+    {
+        top: 70px;
+        left: 300px;
+    }
+    85%
+    {
+        top: 87px;
+        left: 270px;
+    }
+    90%
+    {
+        top: 20px;
+        left: 120px;
+    }
+    95%
+    {
+        top: 37px;
+        left: 70px;
+    }
+    100%
+    {
+        top: 237px;
+        left: 70px;
+    }
+ 
+}
+
+
+@keyframes stage_transform1
+{
+    0% {height: 100px;}
+    47%{ height: 100px;}
+    50%{ height: 300px;}
+    95%{ height: 300px;}
+    100%{}
+}
+@keyframes stage_transform2
+{
+
+    0% {height: 150px;}
+    47%{ height: 150px;}
+    50%{ height: 250px;}
+    95%{ height: 250px;}
+    100%{}
+}
+@keyframes stage_transform4
+{
+
+    0% {height: 250px;}
+    47%{ height: 250px;}
+    50%{ height: 150px;}
+    95%{ height: 150px;}
+    100%{}
+}
+@keyframes stage_transform5
+{
+
+    0% {height: 300px;}
+    46%{ height: 300px;}
+    50%{ height: 100px;}
+    95%{ height: 100px;}
+    100%{}
+}
