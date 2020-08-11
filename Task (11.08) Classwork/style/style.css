@@ -1,0 +1,17 @@
+.card:hover
+{
+
+    position: absolute;
+
+    transform: rotateY(180deg);
+    transition: 0.5s;
+}
+
+.card
+{
+    position: absolute;
+
+    transform: rotateY(0deg);
+    transition: 0.5s;
+}
+
