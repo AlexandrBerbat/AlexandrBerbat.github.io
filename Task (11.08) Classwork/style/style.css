@@ -19,10 +19,8 @@
     height: 150px;
     background-color: red;
 
-    transform-origin: 100% 100%;
-    transform: rotate(45deg);
 
-    animation: rot 60s linear infinite;
+    animation: rot 60s steps(60,end) infinite;
 }
 
 @keyframes rot
