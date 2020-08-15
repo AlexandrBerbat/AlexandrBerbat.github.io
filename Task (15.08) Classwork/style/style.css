@@ -1,0 +1,191 @@
+
+body
+{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.header_top
+{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.header_bott
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right_part
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search
+{
+    display: none;
+}
+
+.valute
+{
+    display: none;
+}
+
+.sort
+{
+    display: none;
+
+}
+
+
+.content img
+{
+    width: 355px;
+}
+
+#phone2{
+    display: none;
+}
+
+.content
+{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.filters
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signs
+{
+    display: flex;
+
+
+}
+
+.chair
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 4px;
+}
+
+.chair img
+{
+    width: 253px;
+}
+
+
+@media all and (max-width: 355px)
+{
+    .main
+    {
+        overflow-x: auto;
+        width: 355px;
+    }
+}
+@media all and (min-width: 355px) and (max-width: 750px)
+{
+    .main
+    {
+        width: 100%;
+    }
+}
+@media all and (min-width: 751px) and (max-width: 1080px)
+{
+    .main
+    {
+        width: 100%;
+    }
+
+    /*.content
+    {
+        flex-wrap: nowrap;
+    }
+
+    #phone2
+    {
+        display: block;
+    }*/
+
+    .search
+    {
+        display: block;
+    }
+
+    .valute
+    {
+        display: block;
+    }
+
+    .valute_sign
+    {
+        display: none;
+    }
+
+    .sort
+    {
+        display: block;
+    }
+
+    .sort_sign
+    {
+        display: none;
+    }
+}
+
+@media all and (min-width: 1080px)
+{
+    .main
+    {
+        width: 1020px;
+    }
+
+    .content
+    {
+        flex-wrap: nowrap;
+    }
+
+    #phone2
+    {
+        display: block;
+    }
+
+    .search
+    {
+        display: block;
+    }
+
+    .valute
+    {
+        display: block;
+    }
+
+    .valute_sign
+    {
+        display: none;
+    }
+
+    .sort
+    {
+        display: block;
+    }
+
+    .sort_sign
+    {
+        display: none;
+    }
+}
