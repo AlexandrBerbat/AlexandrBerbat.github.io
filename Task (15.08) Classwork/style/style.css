@@ -60,6 +60,7 @@ h3
     margin: 20px 0px 20px 0px;
 }
 
+
 .right_part
 {
     display: flex;
@@ -72,7 +73,28 @@ h3
     height: 19px;
 }
 
-.search{display: none;}
+.menu img
+{
+    width: 26px;
+}
+
+.icon-search
+{
+    display: none;
+}
+
+.icon-sort-down
+{
+    display: none;
+}
+
+.search
+{
+
+
+
+    display: none;
+}
 
 .valute{display: none;}
 
@@ -153,6 +175,20 @@ h3
 
     .search
     {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .icon-search
+    {
+        display: block;
+    }
+
+    .icon-sort-down
+    {
         display: block;
     }
 
@@ -196,7 +232,22 @@ h3
 
     .search
     {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .icon-search
+    {
         display: block;
+    }
+
+    .icon-sort-down
+    {
+        display: block;
+
     }
 
     .valute
