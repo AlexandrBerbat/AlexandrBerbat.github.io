@@ -54,6 +54,7 @@ h3
 .header_bott
 {
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
 
@@ -64,7 +65,8 @@ h3
 .right_part
 {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu
@@ -81,25 +83,99 @@ h3
 .icon-search
 {
     display: none;
+    margin-right: 5px;
 }
 
 .icon-sort-down
 {
     display: none;
+    margin-right: 10px;
+}
+
+.city_search
+{
+    margin-left: 200px;
 }
 
 .search
 {
 
-
-
     display: none;
+
+    background: #FCFCFC;
+    border: 1px solid #E8E8EE;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    padding: 10px 20px 10px 20px;
+
+
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #828282;
 }
 
-.valute{display: none;}
+.add_adv
+{
+    background: linear-gradient(245.23deg, #32228A -43.18%, #745ACD 100%), #C4C4C4;
+    border-radius: 3px;
 
-.sort{display: none;}
+    padding: 10px 20px 10px 20px;
 
+    font-family: Google Sans;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+}
+
+.all_adv
+{
+    font-family: Google Sans;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #333333;
+}
+
+.valute
+{
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.sort
+{
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.subvalute, .subsort
+{
+    font-family: Google Sans;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #333333;
+
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+.valute_name, .sort_name
+{
+    font-family: Google Sans;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #979FAD;
+
+    
+}
 
 .content img
 {
@@ -107,6 +183,11 @@ h3
 }
 
 #phone2{display: none;}
+
+.valute_sing, .sort_sign
+{
+    margin-right: 10px;
+}
 
 .content
 {
@@ -176,10 +257,11 @@ h3
     .search
     {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: row;
+        flex-wrap: nowrap;
         align-items: center;
-        margin-right: 20px;
+        margin-right: 40px;
     }
 
     .icon-search
@@ -194,22 +276,24 @@ h3
 
     .valute
     {
-        display: block;
+        display: flex;
     }
 
     .valute_sign
     {
         display: none;
+
     }
 
     .sort
     {
-        display: block;
+        display: flex;
     }
 
     .sort_sign
     {
         display: none;
+
     }
 }
 
@@ -233,10 +317,10 @@ h3
     .search
     {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: row;
         align-items: center;
-        margin-right: 20px;
+        margin-right: 50px;
     }
 
     .icon-search
@@ -252,7 +336,7 @@ h3
 
     .valute
     {
-        display: block;
+        display: flex;
     }
 
     .valute_sign
@@ -262,7 +346,7 @@ h3
 
     .sort
     {
-        display: block;
+        display: flex;
     }
 
     .sort_sign
