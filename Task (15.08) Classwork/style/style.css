@@ -73,6 +73,8 @@ h3
 {
     width: 26px;
     height: 19px;
+
+    margin-left: 15px;
 }
 
 .menu img
@@ -107,7 +109,7 @@ h3
     box-sizing: border-box;
     border-radius: 3px;
 
-    padding: 10px 20px 10px 20px;
+    padding: 10px 10px 10px 10px;
 
 
     font-family: Google Sans;
@@ -129,6 +131,7 @@ h3
     line-height: 16px;
 
     color: #FFFFFF;
+    margin-right: 10px;
 }
 
 .all_adv
@@ -138,6 +141,8 @@ h3
     line-height: 28px;
 
     color: #333333;
+
+    margin-left: 15px;
 }
 
 .valute
