@@ -1,0 +1,17 @@
+body
+{
+    color: black;
+}
+
+$color1: coral;
+
+.first, .second, .third
+{
+    .ford
+    {
+        &:hover
+        {
+            color: $color1;
+        }
+    }
+}

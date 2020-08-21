@@ -1,0 +1,32 @@
+$SqLen: 20px;
+
+body
+{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main
+    {
+        width: 105px;
+        height: 80px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+        .square
+        {
+            height: $SqLen;
+            width: $SqLen;
+
+            border: 1px black solid;
+            background-color: gray;
+        }
+    }
+}
+
