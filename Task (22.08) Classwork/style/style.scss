@@ -1,0 +1,162 @@
+main
+{
+    width: 100%;
+    height: 95vh;
+
+    display: grid;
+    grid-template-rows: 10% 45% 15% 20% 15%;
+}
+
+header
+{
+    width: 100%;
+    padding-bottom: 7px;
+
+
+    .logo
+    {
+        display: flex;
+        justify-content: center;
+
+        img
+        {
+            height: 40px;
+        }
+    }
+
+    .info
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a
+        {
+            margin: 0px 10px 0px 10px;
+        }
+    }
+}
+
+.section_mid
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 66% 33%;
+    
+    grid-template-areas: 
+        "sl srt"
+        "sl srb"
+        ;
+
+
+}
+
+.a1_left
+{
+    grid-area: la1;
+    border: 1px solid black;
+}
+.a2_left
+{
+    grid-area: la2;
+    border: 1px solid black;
+}
+.a3_left
+{
+    grid-area: la3;
+    border: 1px solid black;
+}
+.a4_left
+{
+    grid-area: la4;
+    border: 1px solid black;
+}
+
+.section_left
+{
+
+    font-size: 12px;
+
+    grid-area: sl;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    overflow: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 22% 22% 22% 22% 22%;
+    grid-gap: 5px;
+    padding: 5px;
+    grid-template-areas:
+    ". la1"
+    "la2 la1"
+    "la2 la3"
+    "la4 la3"
+    "la4 .";
+}
+
+
+
+.section_right_top
+{
+    grid-area: srt;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+    article
+    {
+        border: 1px solid rgba(128, 128, 128, 0.459);
+        margin: 5px;
+    }
+}
+
+.section_right_bot
+{
+    grid-area: srb;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+
+    background: url("../res/flowers.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.section_infinitie_scroll
+{
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    margin: 2px;
+
+    overflow: auto;
+}
+
+.section_bottom
+{
+
+    font-size: 14px;
+
+    overflow: auto;
+
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    padding: 2px 0px 2px 0px;
+
+    article
+    {
+        width: 200px;
+        height: 80px;
+        
+        border: 1px solid rgba(128, 128, 128, 0.459);
+    }
+}
+
+footer
+{
+    background: url("../res/hills.jpg") no-repeat;
+    background-size: 100%;
+}
