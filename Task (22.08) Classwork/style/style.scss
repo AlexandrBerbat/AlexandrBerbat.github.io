@@ -1,3 +1,9 @@
+body
+{
+    display: flex;
+    justify-content: center;
+}
+
 main
 {
     width: 100%;
@@ -56,22 +62,18 @@ header
 .a1_left
 {
     grid-area: la1;
-    border: 1px solid black;
 }
 .a2_left
 {
     grid-area: la2;
-    border: 1px solid black;
 }
 .a3_left
 {
     grid-area: la3;
-    border: 1px solid black;
 }
 .a4_left
 {
     grid-area: la4;
-    border: 1px solid black;
 }
 
 .section_left
@@ -84,7 +86,7 @@ header
     overflow: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 22% 22% 22% 22% 22%;
     grid-gap: 5px;
     padding: 5px;
@@ -94,6 +96,11 @@ header
     "la2 la3"
     "la4 la3"
     "la4 .";
+
+    article
+    {
+        border: 1px solid rgba(128, 128, 128, 0.459);
+    }
 }
 
 
@@ -111,6 +118,16 @@ header
     {
         border: 1px solid rgba(128, 128, 128, 0.459);
         margin: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        .rt_img
+        {
+            width: 30px;
+            height: 30px;
+        }
     }
 }
 
@@ -129,7 +146,10 @@ header
     margin: 2px;
 
     overflow: auto;
+
+    //animation: scroll 1s linear 1s infinite;
 }
+
 
 .section_bottom
 {
@@ -159,4 +179,132 @@ footer
 {
     background: url("../res/hills.jpg") no-repeat;
     background-size: 100%;
+}
+
+
+@media screen and (max-width: 400px)
+{
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 401px)
+{
+    header
+    {
+        padding-top: 15px;
+
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-areas: "log . inf ";
+
+        .logo
+        {
+            grid-area: log;
+        }
+
+        .info
+        {
+            padding-top: 7px;
+            grid-area: inf;
+        }
+    }
+
+
+    .section_right_top
+    {
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "a1rt a1rt ."
+        ". a2rt a2rt";
+
+    }
+
+    .a1_right_top
+    {
+        grid-area: a1rt;
+    }
+
+    .a2_right_top
+    {
+        grid-area: a2rt;
+    }
+
+    .section_bottom
+    {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+
+        article
+        {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 1201px)
+{
+
+    main
+    {
+        width: 1201px;
+    }
+
+    header
+    {
+        padding-top: 15px;
+
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-areas: "log . inf ";
+        
+        .logo
+        {
+            grid-area: log;
+        }
+
+        .info
+        {
+            padding-top: 7px;
+
+            grid-area: inf;
+        }
+    }
+
+
+
+    .section_right_top
+    {
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "a1rt a1rt ."
+        ". a2rt a2rt";
+
+    }
+
+    .a1_right_top
+    {
+        grid-area: a1rt;
+    }
+
+    .a2_right_top
+    {
+        grid-area: a2rt;
+    }
+
+    .section_bottom
+    {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+
+        article
+        {
+            width: 50%;
+        }
+    }
 }
