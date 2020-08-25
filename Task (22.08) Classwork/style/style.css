@@ -109,6 +109,7 @@ header .info a {
 
 .section_left article {
   border: 1px solid rgba(128, 128, 128, 0.459);
+  overflow: hidden;
 }
 
 .section_right_top {
@@ -188,6 +189,19 @@ footer {
   background-size: 100%;
 }
 
+@media screen and (max-width: 400px) {
+  main {
+    -ms-grid-rows: 11% 50% 25% 20%;
+        grid-template-rows: 11% 50% 25% 20%;
+  }
+  .section_infinitie_scroll {
+    display: none;
+  }
+  footer {
+    margin-top: 5px;
+  }
+}
+
 @media screen and (max-width: 1200px) and (min-width: 401px) {
   header {
     padding-top: 15px;
@@ -239,6 +253,7 @@ footer {
         flex-wrap: nowrap;
   }
   .section_bottom article {
+    margin: 5px;
     width: 50%;
   }
 }
@@ -297,6 +312,7 @@ footer {
         flex-wrap: nowrap;
   }
   .section_bottom article {
+    margin: 5px;
     width: 50%;
   }
 }
