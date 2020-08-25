@@ -228,6 +228,15 @@ footer
         }
     }
 
+    .section_left
+    {
+        grid-template-areas:
+        "la1 ."
+        "la1 la2"
+        "la3 la2"
+        "la3 la4"
+        ". la4";
+    }
 
     .section_right_top
     {
@@ -293,7 +302,15 @@ footer
         }
     }
 
-
+    .section_left
+    {
+        grid-template-areas:
+        "la1 ."
+        "la1 la2"
+        "la3 la2"
+        "la3 la4"
+        ". la4";
+    }
 
     .section_right_top
     {
