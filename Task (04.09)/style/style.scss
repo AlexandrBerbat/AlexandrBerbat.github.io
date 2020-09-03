@@ -16,6 +16,7 @@ body
 
 .signalling
 {
+    background-color: #fff;
 
     height: 60%;
     width: 80%;
@@ -24,8 +25,20 @@ body
     border: 2px solid red;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 
+}
+
+.interactive div
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.open_door
+{
+    margin-left: 10px;
 }

@@ -12,10 +12,41 @@
 <body>
 
     <div id="code">xxxx</div>
+
+
+
     <div class="signalling">
-        <div id="door">closed</div>
-        <div id="move">on</div>
-        <div id="alarm">disable</div>
+
+        <div class="interactive">
+
+            <div class="password_enter">
+
+                <input class="password" id="password" name="password" type="text" placeholder="Password:">
+
+            </div>
+
+            <div id="door">Door:
+                <div id="door_stat">
+                    closed
+                </div>
+            </div>
+            <div id="move">Motion:
+                <div id="motion_stat">
+                    false
+                </div>
+            </div>
+            <div id="alarm">Alarm:
+                <div id="alarm_stat">
+                    false
+                </div>
+            </div>
+            <button class="open_door" id="doorOpen" onclick="openDoor()">Open door</button>
+        </div>
+
+        <div class="visual">
+            <img id="door_res" src="res/door_closed.png">
+        </div>
+
     </div>
 
 
