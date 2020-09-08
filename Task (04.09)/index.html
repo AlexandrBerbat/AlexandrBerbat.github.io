@@ -30,17 +30,23 @@
                     closed
                 </div>
             </div>
-            <div id="move">Motion:
-                <div id="motion_stat">
-                    false
-                </div>
-            </div>
             <div id="alarm">Alarm:
                 <div id="alarm_stat">
                     false
                 </div>
             </div>
             <button class="open_door" id="doorOpen" onclick="openDoor()">Open door</button>
+            <button class="close_door" id="closeOpen" onclick="closeDoor()">Close door</button>
+
+            <div id="move">Motion:
+                <input id="motion_stat" list="motion_stat_var" placeholder="enable/disable">
+                <datalist id="motion_stat_var">
+                    <option value="do movement">
+                    <option value="no motion">
+                </datalist>
+
+            </div>
+
         </div>
 
         <div class="visual">
