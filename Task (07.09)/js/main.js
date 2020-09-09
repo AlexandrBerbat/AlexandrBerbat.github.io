@@ -149,7 +149,4 @@ function searchNumberRecursive(firstNum, secNum)
     }
 }
 
-console.log(searchNumberRecursive(1,1));
-
-
-//9991999
+searchNumberRecursive(1,1);
