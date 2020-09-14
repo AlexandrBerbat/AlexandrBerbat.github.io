@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+  height: 95vh;
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+}
+
+.button {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  padding-top: 160px;
+}
+/*# sourceMappingURL=style.css.map */
