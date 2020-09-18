@@ -64,15 +64,50 @@ console.log(cars);
 
 console.log("\n\nTask 2:");
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+let arr1 =   [
+    1, 2, 3, 
+    4, 5, 6, 
+    7, 8, 9
+];
+
+let result = [
+    1, 4, 7, 
+    2, 5, 8, 
+    3, 6, 9
+];
+
+//let shiftRatio = 2;
+
+
 
 function newArray(arr) 
 {
     let arrTemp = [];
     arrTemp.length = arr.length;
 
-    arrTemp[0] = arr[0];
+    let shift = 0;
+
+    for(let i = 0; i < arr.length; i++)
+    {
+        // console.log(i);
+        // console.log(shift);
+        // console.log("________");
+
+        arrTemp[i] = arr[shift];
+        shift += 3;
+
+        if(shift >= 9)
+        {
+            shift -= 8;
+        }
+
+    }   
+
+    return arrTemp;
+
 }
 
 
-console.table(newArray(arr));
+console.table(newArray(arr1));
