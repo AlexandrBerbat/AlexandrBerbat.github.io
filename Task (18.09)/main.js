@@ -72,13 +72,7 @@ let arr1 =   [
     7, 8, 9
 ];
 
-let result = [
-    1, 4, 7, 
-    2, 5, 8, 
-    3, 6, 9
-];
-
-//let shiftRatio = 2;
+let shiftRatio = 3;
 
 
 
@@ -96,7 +90,7 @@ function newArray(arr)
         // console.log("________");
 
         arrTemp[i] = arr[shift];
-        shift += 3;
+        shift += shiftRatio;
 
         if(shift >= 9)
         {
