@@ -1,107 +1,59 @@
-console.log("Task 1:");
-
-function randomInt(min, max) {
+function randomInt(min, max)
+{
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
 
-const carAllConf =
+// let arrTemp = [];
+// let out4 = [];
+
+
+// for(let i = 0; i < 10; i++)
+// {
+//     for(let a = 0; a < 10; a++)
+//     {
+//         arrTemp[a] = (a+1)*(i+1);
+//     }
+
+//     out4[i] = arrTemp;
+//     arrTemp = [];
+// }
+
+// for(let x = 0; x < 10; x++)
+// {
+//     for(let y = 0; y < 10; y++)
+//     {
+        
+//         if(x > y && y != 0)
+//         {
+//             out4[x][y] = 0;
+//         }
+
+//     }
+// }
+
+// console.table(out4);
+
+let player1HP = 100;
+let player2HP = 100;
+
+let dmg1 = null;
+let dmg2 = null;
+
+while(player1HP > 0 && player2HP > 0)
 {
-    bodyColor: ["Yellow", "Green", "Red", "Blue", "Orange"],
-    transmission: ["Automatical", "Mechanical"],
-    conditioner: ["True", "False"],
-    interior: ["Leather", "Textile", "Combined"],
-};
-
-
-
-function createCar(carNumber, bodyColorInd, transmissionInd, conditionerInd, interiorInd) {
-    let carTemp = {};
-    carTemp.carNumber = carNumber;
-
-
-    carTemp.bodyColor = carAllConf.bodyColor[bodyColorInd];
-    carTemp.transmission = carAllConf.transmission[transmissionInd];
-    carTemp.conditioner = carAllConf.conditioner[conditionerInd];
-    carTemp.interior = carAllConf.interior[interiorInd];
-
-    carTemp.confCode = carTemp.carNumber + carTemp.bodyColor[0] + carTemp.transmission[0] + carTemp.conditioner[0] + carTemp.interior[0];
-
-    return carTemp;
-};
-
-
-
-let cars = [];
-
-
-let pad = "0000";
-let carNumb = 0;
-
-for (let bodyColorIter = 0; bodyColorIter < carAllConf.bodyColor.length; bodyColorIter++) 
-{
-    for (let transmissionIter = 0; transmissionIter < carAllConf.transmission.length; transmissionIter++) 
-    {
-        for (let conditionerIter = 0; conditionerIter < carAllConf.conditioner.length; conditionerIter++)
-        {
-            for(let interiorIter = 0; interiorIter < carAllConf.interior.length; interiorIter++)
-            {
-
-                cars[carNumb] = createCar((pad+carNumb).slice(-pad.length), bodyColorIter, transmissionIter, conditionerIter, interiorIter);
-                carNumb++;
-            }
-        }
-    }
-}
-
-console.log(cars);
-
-
-
-
-
-
-
-console.log("\n\nTask 2:");
-
-
-
-let arr1 =   [
-    1, 2, 3, 
-    4, 5, 6, 
-    7, 8, 9
-];
-
-let shiftRatio = 3;
-
-
-
-function newArray(arr) 
-{
-    let arrTemp = [];
-    arrTemp.length = arr.length;
-
-    let shift = 0;
-
-    for(let i = 0; i < arr.length; i++)
-    {
-        // console.log(i);
-        // console.log(shift);
-        // console.log("________");
-
-        arrTemp[i] = arr[shift];
-        shift += shiftRatio;
-
-        if(shift >= 9)
-        {
-            shift -= 8;
-        }
-
-    }   
-
-    return arrTemp;
+    dmg1 = randomInt(1,6);
+    dmg2 = randomInt(1,6);
+    player1HP -= dmg1;
+    player2HP -= dmg2;
+    console.log(`Игрок 1 получает минус ${dmg1} очков`);
+    console.log(`Игрок 2 получает минус ${dmg2} очков`);
 
 }
 
+console.log(`1 player hp = ${player1HP}`);
+console.log(`2 player hp = ${player2HP}`);
 
-console.table(newArray(arr1));
+(player1HP <= 0) ? console.log("Игрок 1 выбыл первым.") : console.log("Игрок 2 выбыл первым.");
+
+
