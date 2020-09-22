@@ -1,23 +1,39 @@
 let goBtnEl = document.querySelector(".goBtn");
-let textAreaEl = document.querySelector(".text");
 let mainEl = document.querySelector(".main");
 
 
-goBtnFun = () =>
-{
-    let tempArr = textAreaEl.innerHTML.split(/[.,\/ -]/);
+function bubbleSort(arr) {
+    for (let j = arr.length - 1; j > 0; j--) {
+      for (let i = 0; i < j; i++) {
+        if (arr[i].length > arr[i + 1].length) {
+          let temp = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = temp;
+        }
+      }
+    }
+  }
 
-    
-    for(let i = 0; i < tempArr.length; i++)
-    {
-        if(tempArr[i] == "")
-        {
-            tempArr.splice(i,1);
+goBtnFun = () => {
+
+    let textAreaEl = document.querySelector(".text");
+    let tempArr = textAreaEl.value.split(/[.,\/ -]/);
+    mainEl.innerHTML = "";
+
+    for (let i = 0; i < tempArr.length; i++) {
+        if (tempArr[i] == "" || tempArr[tempArr.length-1] == null) {
+            tempArr.splice(i, 1);
         }
         mainEl.innerHTML += `<input class=\"word\" value="${tempArr[i]}">`;
     }
+
     
-    console.log(tempArr);
+    bubbleSort(tempArr);
+    tempArr.reverse();
+
+    console.log(`Самое длинное слово: ${tempArr[0]}`);
+
+    
 
 }
 
