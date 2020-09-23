@@ -1,0 +1,47 @@
+body
+{
+    width: 100%;
+    height: 95vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img
+{
+    width: 50px;
+    height: 50px;
+}
+
+.chessDesk
+{
+    width: 450px;
+    min-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: rgb(180, 177, 177);
+    border: 5px solid black;
+}
+
+.cell
+{
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(180, 177, 177);
+
+
+}
+
+.white
+{
+    background-color: white;
+}
+
+.black
+{
+    background-color: black;
+
+}
