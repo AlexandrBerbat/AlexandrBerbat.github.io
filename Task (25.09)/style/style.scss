@@ -9,10 +9,19 @@ body
     align-items: center;
 }
 
-img
+.chessFig
 {
-    width: 50px;
-    height: 50px;
+    margin: 0px;
+    padding: 0px;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
 }
 
 .chessDesk
@@ -24,6 +33,7 @@ img
 
     background-color: rgb(180, 177, 177);
     border: 5px solid black;
+
 }
 
 .cell
@@ -31,17 +41,34 @@ img
     width: 50px;
     height: 50px;
     border: 3px solid rgb(180, 177, 177);
-
-
+    
 }
 
 .white
 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.664);
+    
 }
 
 .black
 {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.664);
+    
 
+}
+
+
+.blackFig
+{
+    
+    color: black;
+    -webkit-text-stroke: 0.2px white;
+    
+}
+
+.whiteFig
+{
+    color: white;
+    -webkit-text-stroke: 0.7px black;
+    
 }
