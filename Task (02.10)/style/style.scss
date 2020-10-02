@@ -1,7 +1,8 @@
 body
 {
-    background: red;
+    background: rgba(30, 126, 70, 0.815);
     overflow: hidden;
+    user-select: none;
 }
 
 img
@@ -13,8 +14,9 @@ img
 .ground
 {
     width: 100%;
-    background: gray;
-    border: 5px solid gray;
+    height: 100%;
+    background: rgb(58, 6, 6);
+    border: 5px solid rgb(58, 6, 6);
     position: absolute;
     top: 500px;
 }
@@ -24,17 +26,23 @@ img
     position: absolute;
 
     top: 465px;
-    left: 200px;
-    
+    left: 0px;
 }
 
+nav
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
 
 .btnleft, .btnright
-{
+{   
+    text-align: center;
+
+    margin:20px;
     width: 50px;
     width: 100px;
-    background-color: blue;
-    border: 2px solid black;
-
-    user-select: none;
+    background-color: darkgray;
+    border: 1px solid black;
 }

@@ -1,6 +1,10 @@
 body {
-  background: red;
+  background: rgba(30, 126, 70, 0.815);
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 img {
@@ -10,8 +14,9 @@ img {
 
 .ground {
   width: 100%;
-  background: gray;
-  border: 5px solid gray;
+  height: 100%;
+  background: #3a0606;
+  border: 5px solid #3a0606;
   position: absolute;
   top: 500px;
 }
@@ -19,17 +24,25 @@ img {
 .tank {
   position: absolute;
   top: 465px;
-  left: 200px;
+  left: 0px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
 }
 
 .btnleft, .btnright {
+  text-align: center;
+  margin: 20px;
   width: 50px;
   width: 100px;
-  background-color: blue;
-  border: 2px solid black;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  background-color: darkgray;
+  border: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
