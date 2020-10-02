@@ -1,0 +1,19 @@
+.main
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.block 
+{
+    height: 200px;
+    width: 100px;
+    border: 2px solid blue;
+    background-color: purple;
+}
+
+.block.red
+{
+    background-color: red;
+}

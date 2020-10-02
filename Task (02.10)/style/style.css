@@ -1,0 +1,35 @@
+body {
+  background: red;
+  overflow: hidden;
+}
+
+img {
+  height: 40px;
+  width: 100px;
+}
+
+.ground {
+  width: 100%;
+  background: gray;
+  border: 5px solid gray;
+  position: absolute;
+  top: 500px;
+}
+
+.tank {
+  position: absolute;
+  top: 465px;
+  left: 200px;
+}
+
+.btnleft, .btnright {
+  width: 50px;
+  width: 100px;
+  background-color: blue;
+  border: 2px solid black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=style.css.map */
