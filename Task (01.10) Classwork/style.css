@@ -1,0 +1,26 @@
+.main {
+  height: 200px;
+  width: 300px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.ball {
+  position: relative;
+  top: 85px;
+  left: 135px;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-transition: left 3s linear;
+  transition: left 3s linear;
+}
+
+.btn {
+  height: 20px;
+  width: 60px;
+  border: 1px solid black;
+  margin: 10px;
+}
+/*# sourceMappingURL=style.css.map */
