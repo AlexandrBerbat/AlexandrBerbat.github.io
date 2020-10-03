@@ -18,7 +18,7 @@ function TimeToSec(time)
 const startTimer = () => {
     progressIconEl.classList.add("start");
 
-    let timeLeftVal = new Date(+TimeToSec(timeInputEl.value) * 1000);
+    let timeLeftVal = new Date(+TimeToSec(timeInputEl.value) * 1000 * 60);
 
     let timerOutput = () => {
         
