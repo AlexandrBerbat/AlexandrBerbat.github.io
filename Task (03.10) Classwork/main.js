@@ -21,8 +21,10 @@ const startTimer = () => {
     let timeLeftVal = new Date(+TimeToSec(timeInputEl.value) * 1000);
 
     let timerOutput = () => {
-    
-        console.log(123);
+        
+        timeLeftEl.classList.remove("stopped");
+        startBtnEl.disabled = true;
+
         timeLeftEl.innerHTML = `${(pad+timeLeftVal.getMinutes()).slice(-pad.length)}:${(pad+timeLeftVal.getSeconds()).slice(-pad.length)}`;
 
         let timeLeftValTemp = new Date(timeLeftVal - 1000);
@@ -31,9 +33,10 @@ const startTimer = () => {
         console.log(timeLeftVal);
         if(moment(timeLeftVal).isSame(new Date(0)-1000))
         {
-            clearInterval(timerId);
             progressIconEl.classList.remove("start");
             timeLeftEl.classList.add("stopped");
+            startBtnEl.disabled = false;
+            clearInterval(timerId);
         }
     
     };
