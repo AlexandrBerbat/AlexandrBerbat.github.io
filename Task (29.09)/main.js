@@ -57,9 +57,5 @@ console.log(summ);
 
 console.log("Проверка на кратность элемента пяти:");
 
-const multiplicityCheck = (item, index) => {
-    if (item % 5 == 0) {
-        console.log(`Элемент номер ${index} кратен пяти`);
-    };
-}
-arr.forEach(multiplicityCheck);
+let multiplicityCheck = Boolean(arr.find(item => item%5 == 0));
+console.log(multiplicityCheck);
