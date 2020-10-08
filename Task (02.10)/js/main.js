@@ -6,28 +6,65 @@ const btnRightEl = document.querySelector(".btnRight");
 const tankImgEl = document.querySelector(".tankImg");
 
 let lastMove = "";
+const SPEED = 700 / 2; // 700px/2s
+let timeSpeedChange = null;
+let tankPos = null;
+
+console.log("SPEED: " + SPEED);
+
 
 moveLeft = () => {
-    tankEl.style.left = "0%";
+    tankEl.style.left = "0px";
     console.log("goleft");
 
     if (lastMove !== "left") {
         tankImgEl.style.transform = "scaleX(-1)";
         lastKeyPressed = "left";
     }
+
+    if (tankPos !== null) {
+        console.log("tankPos: " + tankPos);
+        console.log("time: " + (tankPos / SPEED));
+        timeSpeedChange = (tankPos / SPEED);
+
+        tankEl.style.transition = "left " + timeSpeedChange + "s linear";
+        console.log(tankEl.style.transition);
+        console.log("timeSpeedChange" + timeSpeedChange);
+
+
+    }
+
+
 }
+
 moveRight = () => {
-    tankEl.style.left = "88%";
+    tankEl.style.left = "700px";
     console.log("goright");
 
     if (lastMove !== "right") {
         tankImgEl.style.transform = "scaleX(+1)";
         lastKeyPressed = "right";
     }
+
+    if (tankPos !== null) {
+        console.log("tankPos: " + tankPos);
+        console.log("time: " + ((700 - tankPos) / SPEED));
+        timeSpeedChange = ((700 - tankPos) / SPEED);
+
+        tankEl.style.transition = "left " + timeSpeedChange + "s linear";
+        console.log(tankEl.style.transition);
+    }
+
+
+
 }
+
 pauseTank = () => {
     let temp = window.getComputedStyle(tankEl).getPropertyValue("left");
     tankEl.style.left = temp;
+    
+    tankPos = Number(temp.slice(0,-2));
+    console.log("tankPos: " + tankPos);
     console.log("stop");
 };
 

@@ -24,8 +24,8 @@ img {
   position: relative;
   top: 100px;
   left: 0px;
-  -webkit-transition: left 1s linear;
-  transition: left 1s linear;
+  -webkit-transition: left 2s linear;
+  transition: left 2s linear;
 }
 
 nav {
