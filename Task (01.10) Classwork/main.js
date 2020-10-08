@@ -4,6 +4,8 @@ const leftEl = document.querySelector(".leftBtn");
 const keyLeft = 37;
 const keyRight = 39;
 
+let lastKeyPressed = null;
+
 moveLeft = () => {
     ballEl.style.left = "0px";
     console.log("goleft");
@@ -24,6 +26,8 @@ leftEl.addEventListener("mouseup", pauseBall);
 rightEl.addEventListener("mouseup", pauseBall);
 
 document.addEventListener("keydown", (event) => {
+
+
     if(event.code === "ArrowLeft")
     {
         moveLeft();

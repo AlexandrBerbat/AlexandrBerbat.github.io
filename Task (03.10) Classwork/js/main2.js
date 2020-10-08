@@ -18,22 +18,23 @@ const startTimer = () => {
     progressIconEl.classList.add("start");//css
 
 
-    let timeInputTemp = new Date(TimeToSec(timeInputEl.value) * 1000 * 60 - 10800 * 1000);
+    let timeInputTemp = new Date(TimeToSec(timeInputEl.value) * 1000 * 60 - 10800 * 1000); //input время в милисек
     let tempNow2 = new Date();
 
-    let timeLeft = new Date((TimeToSec(`${timeInputTemp.getHours()}:${timeInputTemp.getMinutes()}`)-TimeToSec(`${tempNow2.getHours()}:${tempNow2.getMinutes()}`)) * 1000 * 60);
+    let timeLeft = new Date((TimeToSec(`${timeInputTemp.getHours()}:${timeInputTemp.getMinutes()}`)-TimeToSec(`${tempNow2.getHours()}:${tempNow2.getMinutes()}`)) * 1000 * 60);//время до истечения таймера
 
 
-    let timeToStop = new Date(moment(timeLeft.getTime()).add(tempNow2.getTime()));
+    let timeToStop = new Date(moment(timeLeft.getTime()).add(tempNow2.getTime()));//до которого времени таймер работает
    
-    timeLeft = moment(timeLeft);
+    timeLeft = moment(timeLeft);// для использования ._d далее в moment.js
 
     const timerOutput = () => {
 
         //css
         timeLeftEl.classList.remove("stopped");
         startBtnEl.disabled = true;
-        //css2
+        //css
+        
         let timeTempNow = new Date();
 
         timeLeftEl.innerHTML = `${(pad+timeLeft._d.getMinutes()).slice(-pad.length)}:${(pad+timeLeft._d.getSeconds()).slice(-pad.length)}`;

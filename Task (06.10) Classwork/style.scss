@@ -1,0 +1,17 @@
+.main
+{
+    margin: 10px;
+    border: 2px solid black;
+    height: 30px;
+}
+
+.btn1, .btn2
+{
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.btn1.hide, .btn2.hide 
+{
+    display: none;
+}

@@ -7,24 +7,25 @@ body {
           user-select: none;
 }
 
+.main {
+  width: 800px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 20px;
+}
+
 img {
   height: 40px;
   width: 100px;
 }
 
-.ground {
-  width: 100%;
-  height: 100%;
-  background: #3a0606;
-  border: 5px solid #3a0606;
-  position: absolute;
-  top: 500px;
-}
-
 .tank {
-  position: absolute;
-  top: 465px;
+  position: relative;
+  top: 100px;
   left: 0px;
+  -webkit-transition: left 1s linear;
+  transition: left 1s linear;
 }
 
 nav {
@@ -35,9 +36,10 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 100px;
+  z-index: 100;
 }
 
-.btnleft, .btnright {
+.btnLeft, .btnRight {
   text-align: center;
   margin: 20px;
   width: 50px;
