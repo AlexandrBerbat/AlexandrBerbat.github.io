@@ -1,0 +1,9 @@
+
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-down-big:before { content: '\e801'; } /* '' */
+.icon-left-big:before { content: '\e802'; } /* '' */
+.icon-right-big:before { content: '\e803'; } /* '' */
+.icon-up-big:before { content: '\e804'; } /* '' */
+.icon-sort-down:before { content: '\f0dd'; } /* '' */
+.icon-bitcoin:before { content: '\f15a'; } /* '' */
+.icon-sort-alt-up:before { content: '\f160'; } /* '' */

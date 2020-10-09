@@ -9,6 +9,59 @@ body {
           justify-content: center;
 }
 
+nav {
+  margin: auto;
+  margin-top: 20px;
+  height: 100px;
+  width: 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: ". up ." "left down right";
+}
+
+.icon-left-big, .icon-up-big, .icon-down-big, .icon-right-big {
+  background-color: gray;
+  border: 2px solid rgba(0, 0, 0, 0.623);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-left-big {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+.icon-up-big {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: up;
+}
+
+.icon-down-big {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: down;
+}
+
+.icon-right-big {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: right;
+}
+
 .field {
   width: 400px;
   height: 500px;

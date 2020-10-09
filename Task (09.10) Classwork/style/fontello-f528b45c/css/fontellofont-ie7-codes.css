@@ -1,0 +1,9 @@
+
+.icon-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-down-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-left-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-right-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.icon-up-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.icon-sort-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0dd;&nbsp;'); }
+.icon-bitcoin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf15a;&nbsp;'); }
+.icon-sort-alt-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf160;&nbsp;'); }
