@@ -1,4 +1,5 @@
 let arr = [5, 23, -110, 3, 18, 0, 14,];
+console.log("Исходный массив:");
 console.log(arr);
 
 
