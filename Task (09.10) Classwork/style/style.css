@@ -24,7 +24,7 @@ nav {
 }
 
 .icon-left-big, .icon-up-big, .icon-down-big, .icon-right-big {
-  background-color: gray;
+  background-color: #9bfc00;
   border: 2px solid rgba(0, 0, 0, 0.623);
   border-radius: 20px;
   display: -webkit-box;
@@ -60,6 +60,10 @@ nav {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: right;
+}
+
+.icon-left-big.disabl, .icon-up-big.disabl, .icon-down-big.disabl, .icon-right-big.disabl {
+  display: none;
 }
 
 .field {
