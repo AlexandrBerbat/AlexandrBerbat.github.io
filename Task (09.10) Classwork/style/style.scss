@@ -82,6 +82,12 @@ nav
     border: 2px solid black;
 }
 
+
+.cell.passed
+{
+    background-color: rgba(168, 111, 4, 0.849);
+}
+
 .cell.selected
 {
     background-color: rgb(0, 19, 192);

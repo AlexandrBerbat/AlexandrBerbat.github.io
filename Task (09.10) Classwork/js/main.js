@@ -79,7 +79,7 @@ fillUpField(fieldEl, fieldArr);
 
 
 
-
+////////////////////////////////////////6666666666666666666666///////////////////////////////////
 
 let allCellsEl = document.querySelectorAll(".cell");
 let pointer = [0, 0];
@@ -98,6 +98,7 @@ let btnDownEl = document.querySelector(".icon-down-big");
 let btnRightEl = document.querySelector(".icon-right-big");
 
 function refreshData(pointer) {
+    let tempArr = trackPassedCells(fieldArr);
     clearArray(fieldArr);
     fieldArr[pointer[1]][pointer[0]] = 1;
 
@@ -105,11 +106,15 @@ function refreshData(pointer) {
 
     for (let i = 0; i < fieldArr.length; i++) {
         for (let a = 0; a < fieldArr.length; a++) {
-            if (fieldArr[i][a] == true) {
+            if (fieldArr[i][a] == 1 || fieldArr[i][a] == 2) {
                 allCellsEl[tempIter].classList.add("selected");
             }
             else {
                 allCellsEl[tempIter].classList.remove("selected");
+            }
+            if (tempArr[i][a] == 2) {
+                fieldArr[i][a] = 2;
+                allCellsEl[tempIter].classList.add("passed");
             }
             tempIter++;
         }
@@ -169,6 +174,53 @@ document.addEventListener("keydown", (event) => {
         moveDown();
     }
 });
+
+
+
+
+////////////////////////////////////77777777777777777777777777///////////////////////////////
+
+
+function trackPassedCells(array) {
+    let resultArr = new Array(fieldLength);
+
+    for (let i = 0; i < resultArr.length; i++) {
+        resultArr[i] = new Array(fieldLength);
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        for (let a = 0; a < array.length; a++) {
+            if (array[i][a] == 1 || array[i][a] == 2) {
+                resultArr[i][a] = 2;
+            }
+        }
+    }
+    return resultArr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
