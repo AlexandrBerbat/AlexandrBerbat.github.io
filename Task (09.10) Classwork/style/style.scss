@@ -82,6 +82,11 @@ nav
     border: 2px solid black;
 }
 
+.cell.selected
+{
+    background-color: rgb(0, 19, 192);
+}
+
 .status-row
 {
     width: 95%;

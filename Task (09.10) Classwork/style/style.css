@@ -91,6 +91,10 @@ nav {
   border: 2px solid black;
 }
 
+.cell.selected {
+  background-color: #0013c0;
+}
+
 .status-row {
   width: 95%;
   height: 20px;

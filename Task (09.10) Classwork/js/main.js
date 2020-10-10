@@ -8,7 +8,7 @@ function createArray() {//создание двумерного массива
     for (let i = 0; i < fieldLength; i++) {
         let tempArr = [];
         for (let a = 0; a < fieldLength; a++) {
-            tempArr[a] = a + 1;
+            tempArr[a] = 0;
         }
         array[i] = tempArr;
     }
@@ -17,7 +17,7 @@ function createArray() {//создание двумерного массива
 
 let fieldArr = createArray();
 
-console.log(fieldArr);
+// console.table(fieldArr);
 
 
 function clearArray(array) {//очистка двумерного массива
@@ -73,6 +73,44 @@ function fillUpField(fieldEl, array)//отображение игрового п
 fillUpField(fieldEl, fieldArr);
 
 
+
+let allCellsEl = document.querySelectorAll(".cell");
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//дефолт: первая клетка выделена, массив [1,0,0...]
+document.querySelector(".cell").classList.add("selected");
+fieldArr[0][0] = 1;
+document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+///////////////////////////////////////////////////////////////////////////////////////////
+
+for (let i = 0; i < allCellsEl.length; i++) {
+
+    allCellsEl[i].addEventListener("mouseover", (ev) => {
+
+
+        if(ev.target.classList.contains("selected"))
+        {
+            ev.target.classList.remove("selected");
+
+            let tempRowNumber = Math.floor((i)/5);
+            let tempColumnNumber = (i)%5;
+            fieldArr[tempRowNumber][tempColumnNumber] = 0;
+    
+            document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+
+        }else
+        {
+            ev.target.classList.add("selected");
+
+            let tempRowNumber = Math.floor((i)/5);
+            let tempColumnNumber = (i)%5;
+            fieldArr[tempRowNumber][tempColumnNumber] = 1;
+    
+            document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+        }
+
+    });  
+};
 
 
 
