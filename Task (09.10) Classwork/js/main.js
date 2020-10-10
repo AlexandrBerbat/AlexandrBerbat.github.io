@@ -74,43 +74,140 @@ fillUpField(fieldEl, fieldArr);
 
 
 
+
+
+
+
+
+
+
 let allCellsEl = document.querySelectorAll(".cell");
+let pointer = [0, 0];
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 //дефолт: первая клетка выделена, массив [1,0,0...]
 document.querySelector(".cell").classList.add("selected");
-fieldArr[0][0] = 1;
+fieldArr[pointer[0]][pointer[1]] = 1;
 document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-for (let i = 0; i < allCellsEl.length; i++) {
+let btnLeftEl = document.querySelector(".icon-left-big");
+let btnUpEl = document.querySelector(".icon-up-big");
+let btnDownEl = document.querySelector(".icon-down-big");
+let btnRightEl = document.querySelector(".icon-right-big");
 
-    allCellsEl[i].addEventListener("mouseover", (ev) => {
+function refreshData(pointer) {
+    clearArray(fieldArr);
+    fieldArr[pointer[1]][pointer[0]] = 1;
 
+    let tempIter = 0;
 
-        if(ev.target.classList.contains("selected"))
-        {
-            ev.target.classList.remove("selected");
-
-            let tempRowNumber = Math.floor((i)/5);
-            let tempColumnNumber = (i)%5;
-            fieldArr[tempRowNumber][tempColumnNumber] = 0;
-    
-            document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
-
-        }else
-        {
-            ev.target.classList.add("selected");
-
-            let tempRowNumber = Math.floor((i)/5);
-            let tempColumnNumber = (i)%5;
-            fieldArr[tempRowNumber][tempColumnNumber] = 1;
-    
-            document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+    for (let i = 0; i < fieldArr.length; i++) {
+        for (let a = 0; a < fieldArr.length; a++) {
+            if (fieldArr[i][a] == true) {
+                allCellsEl[tempIter].classList.add("selected");
+            }
+            else {
+                allCellsEl[tempIter].classList.remove("selected");
+            }
+            tempIter++;
         }
+    }
 
-    });  
-};
+    console.log(`pointer: ${pointer}`);
+    console.log(`fieldArr: ${fieldArr}`);
+
+
+
+    document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+}
+
+function moveLeft() {
+    if (pointer[0] > 0) {
+        pointer[0] -= 1;
+        refreshData(pointer);
+    }
+}
+function moveDown() {
+    if (pointer[1] < fieldLength - 1) {
+        pointer[1] += 1;
+        refreshData(pointer);
+    }
+}
+function moveUp() {
+    if (pointer[1] > 0) {
+        pointer[1] -= 1;
+        refreshData(pointer);
+    }
+}
+function moveRight() {
+    if (pointer[0] < fieldLength - 1) {
+        pointer[0] += 1;
+        refreshData(pointer);
+    }
+}
+
+
+btnLeftEl.addEventListener("click", moveLeft);
+btnRightEl.addEventListener("click", moveRight);
+btnUpEl.addEventListener("click", moveUp);
+btnDownEl.addEventListener("click", moveDown);
+
+
+document.addEventListener("keydown", (event) => {
+
+    console.log(event.code);
+
+    if (event.code === "ArrowLeft") {
+        moveLeft();
+    } else if (event.code === "ArrowRight") {
+        moveRight();
+    } else if (event.code === "ArrowUp") {
+        moveUp();
+    } else if (event.code === "ArrowDown") {
+        moveDown();
+    }
+});
+
+
+
+// function movePointer(direction)
+// {
+//     switch
+// }
+
+
+
+
+// for (let i = 0; i < allCellsEl.length; i++) {
+
+//     allCellsEl[i].addEventListener("mouseover", (ev) => {
+
+
+//         if(ev.target.classList.contains("selected"))
+//         {
+//             ev.target.classList.remove("selected");
+
+//             let tempRowNumber = Math.floor((i)/5);
+//             let tempColumnNumber = (i)%5;
+//             fieldArr[tempRowNumber][tempColumnNumber] = 0;
+
+//             document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+
+//         }else
+//         {
+//             ev.target.classList.add("selected");
+
+//             let tempRowNumber = Math.floor((i)/5);
+//             let tempColumnNumber = (i)%5;
+//             fieldArr[tempRowNumber][tempColumnNumber] = 1;
+
+//             document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
+//         }
+
+//     });  
+// };
 
 
 
