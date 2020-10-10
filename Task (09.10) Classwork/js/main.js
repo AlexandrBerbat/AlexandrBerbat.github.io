@@ -120,8 +120,7 @@ function refreshData(pointer) {
         }
     }
 
-    console.log(`pointer: ${pointer}`);
-    console.log(`fieldArr: ${fieldArr}`);
+    console.table(fieldArr);
 
 
 
