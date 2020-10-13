@@ -1,0 +1,30 @@
+.buttons {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.btn1, .btn2 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px;
+  border: 3px solid darkgreen;
+}
+
+.btn2.disabl {
+  opacity: 0;
+}
+
+.hello {
+  text-align: center;
+}
+
+.hello.disabl {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */
