@@ -88,52 +88,105 @@ let btnRightEl = document.querySelector(".icon-right-big");
 document.querySelector(".cell").classList.add("selected");
 fieldArr[pointer[0]][pointer[1]] = 1;
 document.querySelector(".status-row").innerHTML = findFilledCells(fieldArr);
-btnLeftEl.style.display = "none";
-btnUpEl.style.display = "none";
+btnLeftEl.classList.add("disabl");
+btnUpEl.classList.add("disabl");
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////888888888//////////////////
-function blockImpossibleWay(array, pointer) {
+function blockImpossibleWayBorder(pointer) {
     let resultWays = [];//0-left, 1-up, 2-right, 3-down// true - possible way, false - impossible way
 
-    if ((pointer[0] - 1) < 0)// || array[pointer[1] - 1][pointer[0]] == 2) 
-    {
+    if (pointer[0] - 1 < 0) {
         resultWays[0] = false;//left
+
     }
     else {
         resultWays[0] = true;
-
     }
-    if ((pointer[0] + 1) == fieldLength)// || array[pointer[1] + 1][pointer[0]] == 2) 
-    {
+    if ((pointer[0] + 1) == fieldLength) {
         resultWays[2] = false;//right
-    }
-    else {
-        resultWays[2] = true;
 
+    } else {
+        resultWays[2] = true;
     }
-    if ((pointer[1] - 1) < 0)// || array[pointer[1]][pointer[0] - 1] == 2) 
-    {
+    if ((pointer[1] - 1) < 0) {
         resultWays[1] = false;//up
+
     }
     else {
         resultWays[1] = true;
-
     }
-    if ((pointer[1] + 1) == fieldLength)// || array[pointer[1]][pointer[0] + 1] == 2) 
-    {
+    if ((pointer[1] + 1) == fieldLength) {
         resultWays[3] = false;//down
-    }
-    else {
-        resultWays[3] = true;
 
+    } else {
+        resultWays[3] = true
     }
+
     return resultWays;
 };
 //////////////////////8888888//////////////////
+
+
+///////////////////8.1////////////////////////
+function blockImpossibleWayPassed(borderCheckArr, array, pointer) {//функция проверки на заполненные (пройденные клетки)
+    let resultArr = [];
+
+    if (borderCheckArr[0]) {//left
+        if (array[pointer[0] - 1][pointer[1]] >= 1) {
+            resultArr[0] = false;
+        }
+        else {
+            resultArr[0] = true;
+        }
+
+    }
+    else {
+        resultArr[0] = false;
+    }
+
+    if (borderCheckArr[1]) {//up
+        if (array[pointer[0]][pointer[1] - 1] >= 1) {
+            resultArr[1] = false;
+        }
+        else {
+            resultArr[1] = true;
+        }
+    }
+    else {
+        resultArr[1] = false;
+    }
+
+    if (borderCheckArr[2]) {//right
+        if (array[pointer[0] + 1][pointer[1]] >= 1) {
+            resultArr[2] = false;
+        }
+        else {
+            resultArr[2] = true;
+        }
+    }
+    else {
+        resultArr[2] = false;
+    }
+
+    if (borderCheckArr[3]) {//down
+        if (array[pointer[0]][pointer[1] + 1] >= 1) {
+            resultArr[3] = false;
+        }
+        else {
+            resultArr[3] = true;
+        }
+    }
+    else {
+        resultArr[3] = false;
+    }
+
+    return resultArr;
+}
+///////////////////8.1////////////////////////
 
 
 function refreshData(pointer) {
@@ -162,36 +215,44 @@ function refreshData(pointer) {
     console.table(fieldArr);
 
 
-    console.log(blockImpossibleWay(fieldArr, pointer));
 
-    let tempShit = blockImpossibleWay(fieldArr, pointer);
+
+    // let tempShit = blockImpossibleWayBorder(tempArr, pointer);
+    let tempBorderCheck = blockImpossibleWayBorder(pointer);
+    console.log("border check: " + tempBorderCheck);
+    let tempShit = blockImpossibleWayPassed(tempBorderCheck, fieldArr, pointer);
+    console.log("total check: " + tempShit);
+    console.log("pointer: " + pointer);
+
+
+    // blockImpossibleWayPassed(fieldArr, pointer)
 
     if (!tempShit[0]) {
-        btnLeftEl.style.display = "none";
+        btnLeftEl.classList.add("disabl");
     }
     else {
-        btnLeftEl.style.display = "flex";
+        btnLeftEl.classList.remove("disabl");
     }
 
     if (!tempShit[1]) {
-        btnUpEl.style.display = "none";
+        btnUpEl.classList.add("disabl");
     }
     else {
-        btnUpEl.style.display = "flex";
+        btnUpEl.classList.remove("disabl");
     }
 
     if (!tempShit[2]) {
-        btnRightEl.style.display = "none";
+        btnRightEl.classList.add("disabl");
     }
     else {
-        btnRightEl.style.display = "flex";
+        btnRightEl.classList.remove("disabl");
     }
 
     if (!tempShit[3]) {
-        btnDownEl.style.display = "none";
+        btnDownEl.classList.add("disabl");
     }
     else {
-        btnDownEl.style.display = "flex";
+        btnDownEl.classList.remove("disabl");
     }
 
 
@@ -202,33 +263,41 @@ function refreshData(pointer) {
 
 function moveLeft() {
 
-    if (pointer[0] > 0) {
+    
+    if (pointer[0] > 0 && !btnLeftEl.className.includes("disabl")) {
         pointer[0] -= 1;
         refreshData(pointer);
     }
 
+    console.log(fieldArr);
 }
 function moveDown() {
 
-    if (pointer[1] < fieldLength - 1) {
+    if (pointer[1] < fieldLength - 1 && !btnDownEl.className.includes("disabl")) {
         pointer[1] += 1;
         refreshData(pointer);
     }
 
+    console.log(fieldArr);
 }
 function moveUp() {
 
-    if (pointer[1] > 0) {
+    if (pointer[1] > 0 && !btnUpEl.className.includes("disabl")) {
         pointer[1] -= 1;
         refreshData(pointer);
     }
+
+    console.log(fieldArr);
 }
 function moveRight() {
 
-    if (pointer[0] < fieldLength - 1) {
+    if (pointer[0] < fieldLength - 1 && !btnRightEl.className.includes("disabl")) {
         pointer[0] += 1;
         refreshData(pointer);
     }
+
+    console.log(fieldArr);
+
 }
 
 
@@ -282,10 +351,6 @@ function trackPassedCells(array) {//отмечаем какие клетки м�
 
 
 
-
-
-
-console.log(blockImpossibleWay(fieldArr, pointer));
 
 
 ///////////////////////////888888888888888888////////////////////////////////////////////

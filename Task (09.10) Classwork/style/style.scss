@@ -5,11 +5,6 @@ body{
     justify-content: center;
 }
 
-main
-{
-
-}
-
 nav
 {
     margin: auto;
@@ -57,12 +52,22 @@ nav
     grid-area: right;
 }
 
-.icon-left-big.disabl, .icon-up-big.disabl, .icon-down-big.disabl, .icon-right-big.disabl
+.icon-left-big.disabl
 {
     display: none;
 }
-
-
+.icon-up-big.disabl
+{
+    display: none;
+}
+.icon-down-big.disabl
+{
+    display: none;
+}
+.icon-right-big.disabl
+{
+    display: none;
+}
 
 
 .field
