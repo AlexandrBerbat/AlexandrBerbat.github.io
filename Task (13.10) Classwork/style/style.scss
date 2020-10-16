@@ -1,28 +1,43 @@
-.buttons
+main
 {
-    width: 95%;
+    width: 100%;
+}
+
+.parkingLots
+{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.btn1, .btn2
-{
-    user-select: none;
-    padding: 10px;
-    border: 3px solid darkgreen;
-}
 
-.btn2.disabl
+.parkingPlace
 {
-    opacity: 0.5;
-}
+    margin: 5px 30px 5px 30px;
+    border: 2px solid black;
+    width: 100px;
+    height: 200px;
 
-.hello
-{
+    display: flex;
+    align-items: center;
     text-align: center;
 }
 
-.hello.disabl
+.currTime
 {
-    opacity: 0;
+
+    height: 50px;
+    width: 110px;
+    border: 3px solid gray;
+    background-color: white;
+
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+
+    font-size: 24px;
+    text-align: center;
+    padding: 7px;
+    box-sizing: border-box;
+
 }
