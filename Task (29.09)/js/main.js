@@ -54,7 +54,7 @@ console.log(summ);
 ////////////////////////////////////////////////////////////
 
 
-console.log("e)Проверка на кратность элемента пяти:");
+console.log("e)Проверка на наличие 5:");
 
-let multiplicityCheck = arr.includes(arr.find(item => (item % 5 == 0 && item !== 0)));
+let multiplicityCheck = arr.includes(5);
 console.log(multiplicityCheck);
