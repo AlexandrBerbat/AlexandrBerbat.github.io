@@ -1,0 +1,60 @@
+body{
+    width: 100%;
+    height: 95vh;
+    background-color: darkkhaki;
+}
+
+main {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cardsInfo {
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    border: 2px solid gray;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nextCard
+{
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+}
+
+.field
+{
+    width: 530px;
+    height: 530px;
+    border: 2px solid black;
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cell
+{
+    box-sizing: border-box;
+    border: 2px solid black;
+    height: 65px;
+    width: 65px;
+}
