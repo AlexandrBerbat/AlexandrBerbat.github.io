@@ -57,4 +57,22 @@ main {
     border: 2px solid black;
     height: 65px;
     width: 65px;
+
 }
+
+.cell.rotated
+{
+    transform: rotate(90deg);
+}
+
+.image{
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    // transform:rotate(90deg);
+}
+
+image.rotated{
+    transform:rotate(90deg);
+}
+
