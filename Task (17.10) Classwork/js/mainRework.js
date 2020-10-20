@@ -60,7 +60,11 @@ function generateField(cellsArrEx) {
             if (cellsArrEx[i][k] > 0) {
                 // console.log(cellsArrEx)
                 let tempStr = CARDS[cellsArrEx[i][k] - 1].src;
-                fieldEl.innerHTML += `<div class=\"cell\" id=\"${tempId}\"><img src="` + tempStr + `" class=\"image\" id=\"i${tempId}\"></div>`;
+                fieldEl.innerHTML += `<div class=\"cell\" id=\"${tempId}\" style=\"background-image: url(${tempStr});\">`;//<img src="` + tempStr + `" class=\"image\" id=\"i${tempId}\"></div>`;
+                // console.log(`<div class=\"cell\" style=\"background-image: url(${tempStr});\" id=\"${tempId}\" >`);
+
+                // style="background-image: url(./res/corner.png)"
+
                 tempId++;
             } else {
 
@@ -79,7 +83,7 @@ let cellsHtml = document.querySelectorAll(".cell");
 const cellClick = (event) => {
 
     
-    if (event.target.nodeName !== "IMG"&& event.target.innerHTML == "") {
+    if (event.target.style.backgroundImage == "") {
 
         console.dir(event.target)
         console.log(event.target.innerHTML)
@@ -102,7 +106,9 @@ const cellClick = (event) => {
         console.log("Родитель Id: ");
         console.log(Number(event.target.parentNode.id));
 
-        temp2.classList.add("rotated");
+        // temp2.classList.add("rotated");
+        event.target.classList.add("rotated");
+        // document.getElementById(event.target.id).classList.add("rotated");
         console.log("ROTATE!");
 
 
