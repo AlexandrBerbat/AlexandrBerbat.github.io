@@ -85,19 +85,21 @@ const cellClick = (event) => {
     
     if (event.target.style.backgroundImage == "") {
 
-        console.dir(event.target)
-        console.log(event.target.innerHTML)
+        //console.dir(event.target)
+        // console.log(event.target.innerHTML)
         let tempCell = cardsArr.pop();
         // console.log(tempCell);
         cellsArr[Math.floor(Number(event.target.id) / FIELDHEIGHT)][Number(event.target.id) % FIELDWIDTH] = tempCell.numb;
 
-        console.log(cellsArr[Math.floor(Number(event.target.id) / FIELDHEIGHT)][Number(event.target.id) % FIELDWIDTH]);
+        // console.log(cellsArr[Math.floor(Number(event.target.id) / FIELDHEIGHT)][Number(event.target.id) % FIELDWIDTH]);
 
         console.log(cardsArr);
 
     }
     else {
         let temp2 = event.target;
+
+        console.log(document.getElementById(1));
 
         console.log("Таргет: " );
         console.log(event.target);
@@ -110,6 +112,8 @@ const cellClick = (event) => {
         event.target.classList.add("rotated");
         // document.getElementById(event.target.id).classList.add("rotated");
         console.log("ROTATE!");
+
+        console.log(document.getElementById(1));
 
 
     }
