@@ -37,12 +37,16 @@
 let btnEls = document.querySelectorAll(".btn");
 let grayEls = document.querySelectorAll(".gray-div");
 
+let tempTime = 2952;
+
 const btnFunc = (BtnEls, GrayEls) => {
     let iter = 0;
     const BLOCKS = 3;
 
     let intervalID = setInterval(() => {
+        console.log(`time: ${tempTime}`)
         console.log("iter: " + iter);
+        tempTime += 43;
 
         if (iter < BLOCKS) {
             BtnEls[iter].classList.add("done");
@@ -56,7 +60,7 @@ const btnFunc = (BtnEls, GrayEls) => {
 
         iter++;
         iter >= 4 ? clearInterval(intervalID) : true;
-    }, 3213);
+    }, tempTime);
 
 }
 
