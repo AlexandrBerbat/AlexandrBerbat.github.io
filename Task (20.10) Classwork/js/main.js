@@ -37,7 +37,7 @@
 let btnEls = document.querySelectorAll(".btn");
 let grayEls = document.querySelectorAll(".gray-div");
 
-let tempTime = 2952;
+let tempTime = 3000;
 
 const btnFunc = (BtnEls, GrayEls) => {
     let iter = 0;
@@ -46,7 +46,8 @@ const btnFunc = (BtnEls, GrayEls) => {
     let intervalID = setInterval(() => {
         console.log(`time: ${tempTime}`)
         console.log("iter: " + iter);
-        tempTime += 43;
+        // tempTime += 500;
+        console.log(new Date());
 
         if (iter < BLOCKS) {
             BtnEls[iter].classList.add("done");
