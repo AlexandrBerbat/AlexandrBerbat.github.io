@@ -10,7 +10,30 @@
 </head>
 
 <body>
-  <h2>Task</h2>
+
+  <header>
+
+    <% for(var a=0; a<regions.length; a++) {%>
+    <div class="form_radio_btn">
+      <input id="radio-<%= a%>" type="radio" name="radio" value="<%= a%>" checked>
+      <label for="radio-<%= a%>"><%= regions[a] %></label>
+    </div>
+    <% } %>
+
+
+  </header>
+
+  <main>
+    <% for(var i=0; i<countries.length; i++) {%>
+    <ul>
+      <li><img src="<%= countries[i].flag %>"> </li>
+      <li><%= countries[i].country_name %></li>
+      <li><%= countries[i].capital %></li>
+      <li><%= countries[i].region %></li>
+      <li><%= countries[i].population %></li>
+    </ul>
+    <% } %>
+  </main>
 
 
   <script src="./javascripts/main.js"></script>
