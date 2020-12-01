@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var axios = require('axios').default;
 
-
+// https://api.thecatapi.com/v1/images/search?breed_ids=BREED - обьект с url на картинку породы
 
 function searchUnicRegions(arr) {
   let result = [];
@@ -23,6 +23,9 @@ async function getAllRegions() {
     .then((res) => {
       return searchUnicRegions(res.data);
     })
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+    })
 }
 
 async function getCountriesFromRegion(region) {
@@ -35,15 +38,86 @@ async function getCountriesFromRegion(region) {
         }
       })
     })
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+    })
 }
+
+async function getAllCats() {
+  return await axios.get(`https://api.thecatapi.com/v1/breeds`)
+    .then((res) => {
+      return res.data.map((item) => {
+        return {
+          'breed_id': item.id,
+          'country_origin': item.origin,
+          'breed_name': item.name,
+        }
+      });
+
+    })
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+    })
+}
+
+
+//??????????????????????????????????????????????????????????????????
+async function getImgToEachBreed(allBreedsArr) {
+  // console.log(allBreedsArr);
+  let promises = [];
+
+  for(let i = 0; i < allBreedsArr.length; i++)
+  {
+    promises[i] = await axios.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${allBreedsArr[i].breed_id}`)
+    .then((res) => {
+      return res.data[0];
+    })
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+    })
+    
+  }
+
+  Promise.all(promises)
+  .then(value => {
+    value.forEach(item => {
+      item.url;
+    })
+  })
+  .catch((err) => {
+    console.log(`Error: ${err}`);
+  })
+  .then(()=> {
+    console.log(`end`);
+  })
+}
+//?????????????????????????????????????????????????????????????????????
+
+
 
 router.get('/:region', function (req, res, next) {
   let regionGet = req.params.region;
 
-  Promise.all([getAllRegions(), getCountriesFromRegion(regionGet)])
-    .then(values => console.log(values));
+  Promise.all([getAllRegions(), getCountriesFromRegion(regionGet), getAllCats()])
+    .then((value) => {
 
-  res.send(`123`)
+      let page = {
+        regions: value[0],
+        countries: value[1],
+        cats: value[2],
+      };
+      
+      // getImgToEachBreed(page.cats)
+
+      return page;
+    })
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+    })
+    .then(page => {
+      res.render(`index`, page);
+    })
+
 });
 
 module.exports = router;
