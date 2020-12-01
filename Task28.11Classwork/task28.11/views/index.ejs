@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Check_green_icon.svg/323px-Check_green_icon.svg.png" />
+</head>
+
+<body>
+
+  <header>
+
+    <% for(var a=0; a<regions.length; a++) {%>
+    <div class="form_radio_btn">
+      <input id="radio-<%= a%>" type="radio" name="radio" value="<%= a%>" checked>
+      <label for="radio-<%= a%>"><%= regions[a] %></label>
+    </div>
+    <% } %>
+
+
+  </header>
+
+  <main>
+    <% for(var i=0; i<countries.length; i++) {%>
+    <ul>
+      <li><img src="<%= countries[i].flag %>"> </li>
+      <li><%= countries[i].country_name %></li>
+    </ul>
+    <% } %>
+  </main>
+
+
+  <script src="./javascripts/main.js"></script>
+</body>
+
+</html>

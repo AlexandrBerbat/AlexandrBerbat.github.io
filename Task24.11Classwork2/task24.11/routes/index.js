@@ -25,6 +25,7 @@ function searchUnicRegions(arr) {
 router.get('/:region', function (req, res, next) {
 
   let tempRegions = [];
+  let cardsArr = [];
 
   axios.get(`https://restcountries.eu/rest/v2/all?fields=region`)
     .then((res1) => {
@@ -38,7 +39,7 @@ router.get('/:region', function (req, res, next) {
     .then((res2) => {
       let tempData = res2.data;
 
-      let cardsArr = tempData.map((item) => {
+      cardsArr = tempData.map((item) => {
         return {
           'flag': item.flag,
           'country_name': item.name,
@@ -48,8 +49,18 @@ router.get('/:region', function (req, res, next) {
         }
       })
 
+      
       res.render('index', { countries: cardsArr , regions: tempRegions});
     })
+
+    // console.log(`cardsArr: `);
+    // console.log(cardsArr);
+    // console.log(`\n\n`)
+    // console.log(`Regions: `);
+    // console.log(tempRegions);
+
+
+
 });
 
 module.exports = router;
