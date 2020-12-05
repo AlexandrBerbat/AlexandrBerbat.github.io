@@ -60,17 +60,18 @@ async function getAllCats() {
     })
 }
 
-
-//??????????????????????????????????????????????????????????????????
 async function getImgToEachBreed(allBreedsArr) {
-  // console.log(allBreedsArr);
+  
   let promises = [];
 
   for(let i = 0; i < allBreedsArr.length; i++)
   {
     promises[i] = await axios.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${allBreedsArr[i].breed_id}`)
     .then((res) => {
-      return res.data[0];
+      return {
+        'name': res.data[0].breeds[0].name,
+        'url': res.data[0].url
+      };
     })
     .catch((err) => {
       console.log(`Error: ${err}`);
@@ -78,11 +79,9 @@ async function getImgToEachBreed(allBreedsArr) {
     
   }
 
-  Promise.all(promises)
-  .then(value => {
-    value.forEach(item => {
-      item.url;
-    })
+  return await Promise.all(promises)
+  .then(values => {
+    console.log(values);
   })
   .catch((err) => {
     console.log(`Error: ${err}`);
@@ -91,9 +90,6 @@ async function getImgToEachBreed(allBreedsArr) {
     console.log(`end`);
   })
 }
-//?????????????????????????????????????????????????????????????????????
-
-
 
 router.get('/:region', function (req, res, next) {
   let regionGet = req.params.region;
@@ -107,7 +103,8 @@ router.get('/:region', function (req, res, next) {
         cats: value[2],
       };
       
-      // getImgToEachBreed(page.cats)
+      getImgToEachBreed(page.cats);
+
 
       return page;
     })
