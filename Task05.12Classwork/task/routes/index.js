@@ -5,7 +5,7 @@ var upload = multer();
 var axios = require('axios');
 
 
-function CharacterInFilm(charID, allChars) {
+function сharacterInFilm(charID, allChars) {
   let reg = /\d/gi;
   allChars = allChars.map(item => {
     item = item.match(reg);
@@ -36,7 +36,7 @@ router.post('/', upload.none(), (req, res) => {
 
   Promise.all([promiseFilm, promiseChar])
     .then(values => {
-      page.WasInTheFilm = CharacterInFilm(page.characterID, values[0].data.characters)
+      page.WasInTheFilm = сharacterInFilm(page.characterID, values[0].data.characters)
       page.filmName = values[0].data.title;
       page.characterName = values[1].data.name;
       return page;
@@ -56,13 +56,5 @@ router.post('/', upload.none(), (req, res) => {
     })
 
 })
-
-
-
-
-
-
-
-
 
 module.exports = router;
