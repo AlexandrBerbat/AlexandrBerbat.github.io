@@ -3,32 +3,55 @@ var router = express.Router();
 var multer = require('multer');
 const fs = require('fs').promises;
 const path = require('path');
-var axios = require('axios');
+
 
 
 const filepath1 = 'uploads/';
-const filename1 = '1.jpg';
+const filename1 = 'thefile2.jpg';
 
-let storage = multer.diskStorage({
+var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, filepath1);
+    cb(null, '/tmp/my-uploads')
   },
-  filename: function (req,file, cb) {
-    cb(null, filename1);
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now())
   }
 })
 
-var upload = multer({storage: storage});
+var upload = multer({ storage: storage })
+// var upload = multer({storage: storage});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/upload', upload.single('thefile2'), (req, res) => {
-  fs.rename(`${filepath1}${filename1}`, `${filepath1}${req.body.name}`)
-  .then(() => console.log('renamed.'));
-  console.log(req.body.name);
+router.post('/upload', upload.single('avatar'), async (req, res, next) => {
+  try {
+    const avatar = req.file;
+
+    // make sure file is available
+    if (!avatar) {
+        res.status(400).send({
+            status: false,
+            data: 'No file is selected.'
+        });
+    } else {
+        // send response
+        res.send({
+            status: true,
+            message: 'File is uploaded.',
+            data: {
+                name: avatar.originalname,
+                mimetype: avatar.mimetype,
+                size: avatar.size
+            }
+        });
+    }
+
+} catch (err) {
+    res.status(500).send(err);
+}
   res.end();
 })
 

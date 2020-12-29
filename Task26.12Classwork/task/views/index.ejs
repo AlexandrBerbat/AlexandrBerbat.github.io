@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Task 15.12</title>
+  <title>SWAPI</title>
   <link rel="icon" type="image/png"
     href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Check_green_icon.svg/323px-Check_green_icon.svg.png" />
 </head>
@@ -11,15 +11,16 @@
 
   <div class="main">
 
-    <form class="mainform" enctype="multipart/form-data" method="post">
-      <!-- <input type="text" placeholder="filename" name="filename"> -->
-      <input type="file" name="file">
+    <form class="mainform">
+      <input type="text" placeholder="username" name="username">
+      <input type="text" placeholder="useremail" name="useremail">
+      <input type="text" placeholder="userpassw" name="userpassw">
       <div>
         <button type="submit">OK</button>
       </div>
     </form>
 
-    <div class="answ"></div>
+    <div class="answ"><%= result %></div>
 
   </div>
 
