@@ -6,7 +6,7 @@ const end = '2019-12-25';
 //'YYYY-MM-DD' - input
 //'YYYY-MM-DD HH:MM:SS' - output
 
-function generateDate(startDateStr, endDateStr, numberOfGenerations) {
+function getDateArr(startDateStr, endDateStr, numberOfGenerations) {
 
     let startDate = new Date(startDateStr);
     let endDate = new Date(endDateStr);
@@ -20,7 +20,7 @@ function generateDate(startDateStr, endDateStr, numberOfGenerations) {
     return result;
 }
 
-console.log(generateDate(start, end, 10));
+console.log(getDateArr(start, end, 10));
 
 
 
