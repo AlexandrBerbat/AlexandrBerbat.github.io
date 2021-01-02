@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.main {
+  margin: 10px auto;
+  width: 90%;
+  position: relative;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.loader {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.answ {
+  margin-top: 10px;
+}
