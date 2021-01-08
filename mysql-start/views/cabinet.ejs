@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>join text</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="join">JOIN<div>
+    <ul>
+    <% for(let i=0; i < mainArr.length; i++) {%>
+    <li><%=mainArr[i].orderid %></li>
+    <li><%=mainArr[i].userid %></li>
+    <li><%=mainArr[i].name %></li>
+    <li><%=mainArr[i].time %></li>
+    <% } %>
+    </ul>
+    
+  </body>
+</html>

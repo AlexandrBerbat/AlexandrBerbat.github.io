@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>mysql</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <form class="mainform"  method="post">
+
+    <select class="drinksMenu">
+      <% for(let i=0; i < result.length; i++) { %>
+        <option>
+          <%= result[i].name %>
+        </option>
+        <% } %>
+    </select>
+    <input type="date" class="dateStart">
+    <br>
+    <input type="date" class="dateEnd">
+    <br>
+    <button class="submit" type="submit">Submit</button>
+  </form>
+
+  <div class="answ">
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
