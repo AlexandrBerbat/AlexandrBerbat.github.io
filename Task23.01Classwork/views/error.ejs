@@ -1,0 +1,15 @@
+<% if (error.status === 404 ) { %>
+
+  <span>
+    <b>404!!!!</b> 
+    Page not found
+  </span>
+
+<% } else { %>
+  
+  <h1><%= message %></h1>
+  <h2><%= error.status %></h2>
+  <pre><%= error.stack %></pre>
+
+<% } %>
+

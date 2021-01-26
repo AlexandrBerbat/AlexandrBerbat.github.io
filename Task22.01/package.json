@@ -1,0 +1,25 @@
+{
+  "name": "api2020",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_PATH=. node ./bin/www",
+    "devstart": "cross-env NODE_PATH=. NODE_ENV=development node --inspect=9898 ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^7.0.3",
+    "crossenv": "0.0.2-security",
+    "debug": "~2.6.9",
+    "deep-freeze": "0.0.1",
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "helmet": "^4.2.0",
+    "mongoose": "^5.11.8",
+    "natural": "^2.4.1",
+    "pino": "^6.8.0",
+    "pino-http": "^5.3.0",
+    "pino-pretty": "^4.3.0",
+    "telegram-bot-api": "^2.0.1"
+  }
+}
