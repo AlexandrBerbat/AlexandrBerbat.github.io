@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="windth=device-width, initial-scale">
+        <title>Add Mark</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <h1><%= surname %></h1>
+
+        <select name="subj">
+
+            <% subjArr.forEach(el => { %>
+
+            <option value="<%= el %>"><%= el %></option>
+
+            <% }) %>
+
+        </select>
+        <input type="text" name="mark">
+        <input type="hidden" name="userid" value="<%= userId %>">
+
+        <button type="submit">OK</button>
+
+        <div class="answ"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"></script>
+        <script src="./js/main.js"></script>
+        
+    </body>
+</html>

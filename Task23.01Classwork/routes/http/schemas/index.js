@@ -4,7 +4,7 @@ module.exports = {
         foo: {
             type: "string",
             max: 55,
-            pattern: "^[0-9]+"
+            pattern: "^[0-9]+$"
         },
         bar: {
             type: "string",
@@ -14,7 +14,7 @@ module.exports = {
         three: {
             type: "string",
             maxLength: 3,
-            pattern: "^[0-9]+"
+            pattern: "^[0-9]+$"
         },
     },
 }
