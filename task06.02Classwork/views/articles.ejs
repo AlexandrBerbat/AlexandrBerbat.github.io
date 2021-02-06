@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Articles</title>
+    <!-- <link rel='stylesheet' href='/styles/main.css' /> -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+      <div class="article">
+        <div class="title">Title: <%=Article.title %></div>
+        <div class="owner">Owner: <%=Article.owner.name %></div>
+        <div class="text">Text: <%=Article.text %></div>
+        <div class="date">Created at: <%=Article.createdAt %></div>
+      </div>
+
+
+      <div class="status"></div>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"></script> -->
+      <!-- <script src="./js/mainRegist.js"></script> -->
+  </body>
+
+</html>
