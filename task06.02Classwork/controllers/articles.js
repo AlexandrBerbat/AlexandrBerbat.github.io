@@ -8,6 +8,14 @@ const showByID = async (req, res) => {
     res.render('articles', {Article: article});
 }
 
+const showAllByID = async (req, res) => {
+    // console.log(req.params.id);
+    const articles = await Articles.showAllArticles(req.params.id);
+
+    console.log(articles);
+    res.send(200);
+}
+
 const create = async (req, res) => {
     // const article = new Articles({
     //     title: "January marks",
@@ -25,5 +33,6 @@ const create = async (req, res) => {
 
 module.exports = {
     showByID,
+    showAllByID,
     create
 }

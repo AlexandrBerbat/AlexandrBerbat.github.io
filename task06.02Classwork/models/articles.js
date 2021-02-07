@@ -19,6 +19,20 @@ generalSchema.statics.showArticle = async function (articleID) {
     })
 }
 
+generalSchema.statics.showAllArticles = async function (articleOwnerID) {
+    return this.find({owner: articleOwnerID})
+    .populate('owner', 'name')
+    .populate('editors', 'name')
+    .then(r => {
+        // console.log(r);
+        return r;
+    })
+    .catch(err => {
+        console.log(err);
+        return `Error ${err}`;
+    })
+}
+
 const modelname = path.basename(__filename, '.js');
 const model = mongoose.model(modelname, generalSchema);
 module.exports = model;

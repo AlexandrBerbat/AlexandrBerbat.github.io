@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "ajv": "^7.0.4",
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "^1.4.5",
     "cross-env": "^7.0.3",
     "crossenv": "0.0.2-security",
     "crypto": "^1.0.1",

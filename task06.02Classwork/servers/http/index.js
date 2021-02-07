@@ -4,6 +4,7 @@ const createError = require('http-errors');
 // const logger = require('logger').express;
 // const log = require('logger').common;
 const express = require('express');
+const cookieParser = require('cookie-parser');
 
 // Роуты
 const indexRouter = require('routes/http/index');
@@ -17,7 +18,7 @@ app.set('view engine', 'ejs');
 // app.use(logger); // логер. Там внутри pino
 // app.use(helmet()); // хелмет фильтрует вредные заголовки и кривые запросы. Смотри доку хелмета для подробностей.
 app.use(express.json());
-
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../../public')));
 

@@ -43,6 +43,29 @@ router.get('/', mainCtrl.start);
 router.get('/articles/:id', articles.showByID);
 router.get('/articles/', articles.create);
 
+router.get('/allArticles', articles.showAllByID);
+
+router.get('/cookie', function (req, res) {
+    console.log('Cookies: ', req.cookies);
+    // console.log(req.cookies.token);
+    res.send(200);
+})
+
+// router.get('/cookie-set', function (req,res) {
+//     // res.cookie('token', '123456789');
+//     res.clearCookie("token");
+//     res.send('Cookie set');
+// })
+
+router.get('/cookie-clear', function (req,res) {
+    // res.cookie('token', '123456789');
+    res.clearCookie("authToken");
+    res.send('Cookie cleared');
+})
+
+
+
+
 
 
 module.exports = router;

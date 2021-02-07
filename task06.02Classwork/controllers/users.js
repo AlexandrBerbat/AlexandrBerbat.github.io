@@ -14,8 +14,11 @@ const startRegIn = async (req, res) => {
 }
 
 const trySignIn = async (req, res) => {
-    if (await Users.checkUser(req.body.login, req.body.passw)) {
-        res.send("Logged in succesfully :}");
+    let userID = await Users.checkUser(req.body.login, req.body.passw)
+    if (userID) {
+        console.log(userID);
+        res.cookie('authToken', `${userID}`);
+        res.send(`Logged in succesfully :}`);
     } else {
         res.send("Failed to log in ;[")
     }

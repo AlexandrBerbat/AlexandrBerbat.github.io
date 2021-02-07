@@ -18,7 +18,11 @@ generalSchema.statics.checkUser = async function (login, pass) {
     const currHash = crypto.createHmac('sha256', pass)
         .update(salt)
         .digest('hex');
-    return currHash === userName.password ? true : false;
+        if(currHash === userName.password) {
+            return userName._id;
+        }else {
+            return false;
+        }
 }
 
 generalSchema.virtual('passw')
