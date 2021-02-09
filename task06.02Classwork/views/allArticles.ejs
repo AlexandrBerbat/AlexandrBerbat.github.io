@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Articles</title>
+    <!-- <link rel='stylesheet' href='/styles/main.css' /> -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+      <div class="articles">
+        <% for(let i = 0; i < articles.length; i++) { %>
+        <div class="title">Title: <b><%=articles[i].title %></b></div>
+        <div class="owner">Owner: <%=articles[i].owner.name %></div>
+        <div class="text">Text: <%=articles[i].text %></div>
+        <div class="date">Created at: <%=articles[i].createdAt %></div>
+        <br>
+        <% } %>
+      </div>
+
+
+      <div class="status"></div>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"></script> -->
+      <!-- <script src="./js/mainRegist.js"></script> -->
+  </body>
+
+</html>

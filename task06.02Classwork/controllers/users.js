@@ -18,7 +18,7 @@ const trySignIn = async (req, res) => {
     if (userID) {
         console.log(userID);
         res.cookie('authToken', `${userID}`);
-        res.send(`Logged in succesfully :}`);
+        res.send(`Logged in succesfully :}<br><a href="/allArticles">See all articles</a>`);
     } else {
         res.send("Failed to log in ;[")
     }

@@ -41,14 +41,14 @@ router.post('/regist', upload.none(), validator, users.tryRegist);
 router.get('/', mainCtrl.start);
 
 router.get('/articles/:id', articles.showByID);
-router.get('/articles/', articles.create);
+// router.get('/articles/', articles.create);
 
 router.get('/allArticles', articles.showAllByID);
 
 router.get('/cookie', function (req, res) {
     console.log('Cookies: ', req.cookies);
     // console.log(req.cookies.token);
-    res.send(200);
+    res.send(req.cookies);
 })
 
 // router.get('/cookie-set', function (req,res) {
