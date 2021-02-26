@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Socket.IO</title>
+    </head>
+    <body>
+        <ul id="messages"></ul>
+        <form id="form" action="">
+            <input id="input" type="range" min="0" max="99" step="1" value="1"> <button>Send</button>
+        </form>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+
+            var form = document.getElementById('form');
+            var input = document.getElementById('input');
+            console.log(input);
+
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              if (input.value) {
+                socket.emit('message', input.value);
+                input.value = '';
+              }
+            });
+        </script>
+    </body>
+</html>
