@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Users</title>
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Check_green_icon.svg/323px-Check_green_icon.svg.png" />
+</head>
+
+<body>
+
+  <div class="main">
+
+    <% for(let i = 0; i < users.length; i++) { %>
+
+        <% let userData = Object.entries(users[i]); %>
+
+        <ul>
+        <% for(let a = 0; a < userData.length; a++) { %>
+
+            <li><%=userData[a][0]%>: <%=userData[a][1]%></li>
+            
+        <% } %>
+        </ul>
+
+    <% } %>
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"></script>
+
+</body>
+
+</html>

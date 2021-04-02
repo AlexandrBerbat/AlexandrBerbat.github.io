@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="windth=device-width, initial-scale">
+        <title>Users</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <% arr.forEach(el => { %>
+
+            <div><%= el.name %> <%= el.surname %>
+            <a href="/addmark/?userId=<%= el._id %>&surname=<%=el.surname %><% Object.keys(el.subjects).forEach(item => { %>&subjArr[]=<%= item %><% }) %>">add mark</a></div>
+
+            <% }); %>
+    </body>
+</html>

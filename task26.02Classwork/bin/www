@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+// Конфиги подключаються самыми первыми
+require('config');
+// Логер в папке логер. Там внутри pino
+const log = require('logger').common;
+
+// ранеры которые нам понадобяться
+const dbRunner = require('./runners/db');
+const firstRunRunner = require('./runners/firstRunRunner');
+const webRunner = require('./runners/web');
+
+// разные параметры
+// require('events').EventEmitter.defaultMaxListeners = Infinity; // Снятие лимита листенеров на ивенты, по умолчанию их очень мало. Этот лимит отменяйте с осторожностью. Много листенеров приводят к глюкам.
+
+// начало цепочки запуска
+Promise.resolve()
+  .then(dbRunner)
+  .then(firstRunRunner)
+  .then(webRunner)
+  .then(() => {
+    // сообщаем что все хорошо
+    log.info('\x1b[42m\x1b[30m ====> Ready to work <==== \x1b[0m');
+  })
+  .catch((err) => {
+    // сообщаем что что-то сломалось, запуск не удался
+    log.error('\x1b[41m Run is failed \x1b[0m', err);
+
+    // Выключить приложение если все плохо. На случай если оно не упало.
+    // Ранее мы пытались сделать чтобы модули сами себя завершали, но было много сложностей с этим
+    // Если вы используете логер, логи могут не успеть записаться в файл, потому мы ждем немного, чтобы все успело закончиться
+    setTimeout(() => process.exit(1), 15000);
+  });
